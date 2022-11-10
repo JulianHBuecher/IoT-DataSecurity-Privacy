@@ -1,4 +1,4 @@
-# Seminararbeit - Datenschutz und Privatsphäre in IoT und deren Anwendungen
+# Seminararbeit - Datenschutz IoT-Systemen und deren Anwendungen
 
 ## Inhaltsverzeichnis
 - Einleitung

@@ -2,6 +2,10 @@
 % LLNCS macro package for Springer Computer Science proceedings;
 % Version 2.21 of 2022/01/12
 %
+%% arara directives
+% arara: pdflatex
+% arara: biber
+% arara: pdflatex
 \documentclass[runningheads]{llncs}
 
 %----------------------------------------------------------------------------------------
@@ -14,7 +18,7 @@
 
 % Used for displaying a sample figure. If possible, figure files should be included in EPS format.
 \usepackage{graphicx} 
-
+	
 % Reference configuration
 \usepackage[
 backend=biber, % using biber, bibtex task has to be configured to use biber (Texmaker: Options)
@@ -30,6 +34,14 @@ sorting=ynt % sorting options: https://de.overleaf.com/learn/latex/Articles/Gett
 
 % other packages
 \usepackage{import}
+% Abkuerzungsverzeichnis
+\usepackage[printonlyused]{acronym}
+\usepackage{nameref}
+\usepackage{hyperref}
+
+%----------------------------------------------------------------------------------------
+% Additional Commands
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{\ref*{#1} \nameref*{#1}}} % One single link
 
 %----------------------------------------------------------------------------------------
 
@@ -39,26 +51,20 @@ sorting=ynt % sorting options: https://de.overleaf.com/learn/latex/Articles/Gett
 %	DOCUMENT TITLE 
 %----------------------------------------------------------------------------------------
 
-\title{Contribution Title\thanks{Supported by organization x.}}
+\title{Datenschutz in IoT-Systemen und deren Anwendungen}
 %
 %\titlerunning{Abbreviated paper title}
 % If the paper title is too long for the running head, you can set
 % an abbreviated paper title here
 %
-\author{First Author\inst{1}\orcidID{0000-1111-2222-3333} \and
-Second Author\inst{2,3}\orcidID{1111-2222-3333-4444} \and
-Third Author\inst{3}\orcidID{2222--3333-4444-5555}}
+\author{Julian Bücher\inst{1}}
 %
-\authorrunning{F. Author et al.}
 % First names are abbreviated in the running head.
 % If there are more than two authors, 'et al.' is used.
 %
-\institute{Princeton University, Princeton NJ 08544, USA \and
-Springer Heidelberg, Tiergartenstr. 17, 69121 Heidelberg, Germany
-\email{lncs@springer.com}\\
-\url{http://www.springer.com/gp/computer-science/lncs} \and
-ABC Institute, Rupert-Karls-University Heidelberg, Heidelberg, Germany\\
-\email{\{abc,lncs\}@uni-heidelberg.de}}
+\institute{Hochschule Karlsruhe, \\Moltkestraße 30, 76133 Karlsruhe, Deutschland\\
+\email{buju1023@h-ka.de}\\
+\url{https://www.h-ka.de/infm}}
 %
 \maketitle              % typeset the header of the contribution
 
@@ -67,21 +73,28 @@ ABC Institute, Rupert-Karls-University Heidelberg, Heidelberg, Germany\\
 %----------------------------------------------------------------------------------------
 
 \begin{abstract}
-The abstract should briefly summarize the contents of the paper in
-150--250 words.
+Im Rahmen ihrer Funktion sammeln Geräte und Anwendungen innerhalb des Internet of Things (IoT) beständig Daten ihrer Umgebung. Hierbei kann es sich um Daten von äußeren Gegebenheiten, wie z.B. ihrer direkten Umgebung, oder auch um personenbezogene Daten handeln. Hieraus ergeben sich jedoch starke Eingriffe in die Selbstbestimmung der Nutzer, die zu jeder Zeit die Möglichkeit besitzen sollten, den Umfang und die Art der Daten zu kontrollieren, die über sie gesammelt werden. Teil dieser Ausarbeitung ist die Analyse der gesammelten Daten, die im Bereich Smart Home und Smart City von den Nutzern gesammelt wird und deren Einhaltung von rechtlichen Rahmenbedindngungen, wie z.B. der Datenschutz Grundverordnung.
 
-\keywords{First keyword  \and Second keyword \and Another keyword.}
+\keywords{Internet of Things  \and Datenschutz \and Privatsphäre \and GDPR \and Smart Home \and Smart City.}
 \end{abstract}
 
 %----------------------------------------------------------------------------------------
 %	DOCUMENT BODY
 %----------------------------------------------------------------------------------------
 
-\import{sections/}{introduction.tex}
+\newpage
+
+\import{shortages/}{shortages.tex}
+
+\newpage
+
+\import{sections/introduction/}{introduction.tex}
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
+
+\newpage
 
 \printbibliography
 

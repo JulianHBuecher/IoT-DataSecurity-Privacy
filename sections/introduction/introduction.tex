@@ -1,79 +1,65 @@
 %% introduction.tex
 %%
 
+%------------------------------------------------------------------------------------------------
+\section{Einleitung}
+\label{sec:Einleitung}
+%------------------------------------------------------------------------------------------------
+Als Einführung in das Thema wird beginnend mit einer Motivation die Problematik hinsichtlich der bearbeiteten Problemstellung hergeleitet. Darauf aufbauend werden in den nachfolgenden Unterkapiteln die Grundlagen bezüglich der Nomenklatur gelegt.
 
-\section{First Section}
-\subsection{A Subsection Sample}
-Please note that the first paragraph of a section or subsection is
-not indented. The first paragraph that follows a table, figure,
-equation etc. does not need an indent, either.
+%------------------------------------------------------------------------------------------------
+\subsection{Motivation}
+\label{sec:Einleitung:ssec:Motivation}
+%------------------------------------------------------------------------------------------------
+\noindent
+Das \ac{iot} und dessen Anwendungen nehmen im Rahmen der immer weiter voranschreitenden Entwicklungen im Bereich kleinster Sensoren und hochleistungsfähiger Chips eine immer wichtigere Rolle in der Kontrolle und Steuerung komplexer Systeme ein. 
+Ihr Einsatz reicht von der Implementierung in hochautomatisierten Fertigungsstraßen bis hin zu kleinsten medizinischen Geräten, die innerhalb oder als Peripherie durch den Menschen genutzt werden können. Über die Sensoren können somit gezielt Daten aus deren Umfeld erhoben und für spätere Optimierungen analysiert werden. Im industriellen Bereich wären dies zum Beispiel die Möglichkeiten zur gezielteren Wartung von einzelnen Fertigungsanlagen, auch als Predictive Maintenance bekannt, oder der fein-granulareren Überwachung von einzelnen Produktionsschritte. 
+Aufgrund ihrer Allgegenwärtigkeit, auch innerhalb des privaten Bereichs, sammeln die "intelligenten" Sensoren neben rein technischen Daten auch unweigerlich Daten, die im Zusammenhang mit menschlichen Nutzern stehen. Diese sogenannten \ac{pii} sind eine besondere Kategorie von Informationen, die es ermöglichen Rückschlüsse auf den Nutzer zu ziehen. Aus diesem Grunde sind sie, insbesondere in der heutigen Zeit, besonders schützenswert.
+Genau aus diesem Grund, wurden rechtliche Rahmenbedingungen, wie zum Beispiel die \ac{gdpr} auf europäischer Ebene geschaffen, die die Handhabung solcher Daten vorschreibt. Jedoch liegt die Einhaltung dieser Formalitäten stets bei den Herstellern von Smart Devices. Eine Überprüfung der Umsetzung innerhalb der einzelnen Geräte und ihrer Applikationen liegt im Vertrauen des Nutzers und muss für jedes Gerät im Einzelfall geprüft werden.
+Betreffend dieser Fragestellung bezüglich der Umsetzung von Privatsphäre und Datensicherheit in der Welt der \acs{iot} und deren Applikationen werden in den nachfolgenden Kapiteln die bisherigen Ergebnisse zu dieser Thematik zusammengefasst und eine abschließende Bewertung des derzeitigen Standes erstellt.
 
-Subsequent paragraphs, however, are indented.
+%------------------------------------------------------------------------------------------------
+\subsection{Grundlagen}
+\label{sec:Einleitung:ssec:Grundlagen}
+%------------------------------------------------------------------------------------------------
 
-\subsubsection{Sample Heading (Third Level)} Only two levels of
-headings should be numbered. Lower level headings remain unnumbered;
-they are formatted as run-in headings.
+Für eine bessere Verortung der einzelnen Begrifflichkeiten aus dem Bereich des \acs{iot} und der Privatsphäre und Datensicherheit werden im nachfolgenden Kapitel die Grundlagen gelegt.
 
-\paragraph{Sample Heading (Fourth Level)}
-The contribution should contain no more than four levels of
-headings. Table~\ref{tab1} gives a summary of all heading levels.
+%------------------------------------------------------------------------------------------------
+\subsubsection{Geräte des \acl{iot}}
+\label{sec:Einleitung:ssec:Grundlagen:sssec:Geräte des Internet of Things}
+%------------------------------------------------------------------------------------------------
+Innerhalb des \acl{iot} sind Geräte unterschiedlichster Art miteinander in Interaktion. Hierbei reicht die Bandbreite von Gadgets des alltäglichen Gebrauchs, u.a. Mobiltelefone oder Smart Watches, bis hin zu vollumfänglichen Robotern, die über Kameras und Sensoren mit ihrer Umwelt interagieren.
 
-\begin{table}
-\caption{Table captions should be placed above the
-tables.}\label{tab1}
-\begin{tabular}{|l|l|l|}
-\hline
-Heading level &  Example & Font size and style\\
-\hline
-Title (centered) &  {\Large\bfseries Lecture Notes} & 14 point, bold\\
-1st-level heading &  {\large\bfseries 1 Introduction} & 12 point, bold\\
-2nd-level heading & {\bfseries 2.1 Printing Area} & 10 point, bold\\
-3rd-level heading & {\bfseries Run-in Heading in Bold.} Text follows & 10 point, bold\\
-4th-level heading & {\itshape Lowest Level Heading.} Text follows & 10 point, italic\\
-\hline
-\end{tabular}
-\end{table}
+%------------------------------------------------------------------------------------------------
+\subsubsection{Klassifikation von Daten}
+\label{sec:Einleitung:ssec:Grundlagen:sssec:Klassifikation von Daten}
+%------------------------------------------------------------------------------------------------
+Wie bereits in \fullref{sec:Einleitung:ssec:Motivation} erwähnt, können die gesammelten Daten auf Basis ihres Informationsgehaltes in unterschiedliche Kategorien eingeteilt werden. Hierzu kann in die nachfolgenden Kategorien von \ac{pii} und \ac{nonpii} im gröbsten Sinne unterschieden werden. Bei genauerer Betrachtung können diese generalisierten Klassen weiter ausdifferenziert werden. Im Rahmen dieser Arbeit wird jedoch nur in die beiden genannten Arten unterschieden. Jede dieser Klassen besitzt neben der für sie einzigartigen Information einen anderen Anspruch an deren Schutz.
 
+%------------------------------------------------------------------------------------------------
+\paragraph{\acf{pii}}
+\label{sec:Einleitung:ssec:Grundlagen:sssec:Klassifikation von Daten:para:PII}
+%------------------------------------------------------------------------------------------------
+Die \ac{pii} beschreiben eine Information, die Daten enthält, die wiederum auf eine Person zurückgeführt werden können, von der die Daten gesammelt wurden. Die Gefahren, die mit dieser Art von Daten verbunden sind, werden im nachfolgenden Unterkapitel genauer beschrieben. Klassische Beispiele für \acs{pii} sind zum Beispiel:
+\begin{itemize}
+\item Vorname und Nachname
+\item E-Mail Adresse
+\item ...
+\end{itemize}
 
-\noindent Displayed equations are centered and set on a separate
-line.
-\begin{equation}
-x + y = z
-\end{equation}
-Please try to avoid rasterized images for line-art diagrams and
-schemas. Whenever possible, use vector graphics instead (see
-Fig.~\ref{fig1}).
+%------------------------------------------------------------------------------------------------
+\paragraph{\acf{nonpii}}
+\label{sec:Einleitung:ssec:Grundlagen:sssec:Klassifikation von Daten:para:Non-PII}
+%------------------------------------------------------------------------------------------------
 
-\begin{figure}
-\includegraphics[width=\textwidth]{pictures/fig1.eps}
-\caption{A figure caption is always placed below the illustration.
-Please note that short captions are centered, while long ones are
-justified by the macro package automatically.} \label{fig1}
-\end{figure}
+%------------------------------------------------------------------------------------------------
+\subsubsection{Gefahren für die Privatsphäre}
+\label{sec:Einleitung:ssec:Grundlagen:sssec:Gefahren für die Privatsphäre}
+%------------------------------------------------------------------------------------------------
 
-\begin{theorem}
-This is a sample theorem. The run-in heading is set in bold, while
-the following text appears in italics. Definitions, lemmas,
-propositions, and corollaries are styled the same way.
-\end{theorem}
-%
-% the environments 'definition', 'lemma', 'proposition', 'corollary',
-% 'remark', and 'example' are defined in the LLNCS documentclass as well.
-%
-\begin{proof}
-Proofs, examples, and remarks have the initial word in italics,
-while the following text appears in normal font.
-\end{proof}
-For citations of references, we prefer the use of square brackets
-and consecutive numbers. Citations using labels or the author/year
-convention are also acceptable. The following bibliography provides
-a sample reference list with entries for journal
-articles~\cite{ref_article1}, an LNCS chapter~\cite{ref_lncs1}, a
-book~\cite{ref_book1}, proceedings without editors~\cite{ref_proc1},
-and a homepage~\cite{ref_url1}. Multiple citations are grouped
-\cite{ref_article1,ref_lncs1,ref_book1},
-\cite{ref_article1,ref_book1,ref_proc1,ref_url1}.
+%------------------------------------------------------------------------------------------------
+\subsubsection{\acf{gdpr}}
+\label{sec:Einleitung:ssec:Grundlagen:sssec:Klassifikation von Daten:para:GDPR}
+%------------------------------------------------------------------------------------------------
 
-\subsubsection{Acknowledgements} Please place your acknowledgments at
-the end of the paper, preceded by an unnumbered run-in heading (i.e.
-3rd-level heading).
