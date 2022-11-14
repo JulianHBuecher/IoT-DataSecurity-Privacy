@@ -5,61 +5,15 @@
 \section{Einleitung}
 \label{sec:Einleitung}
 %------------------------------------------------------------------------------------------------
-Als Einführung in das Thema wird beginnend mit einer Motivation die Problematik hinsichtlich der bearbeiteten Problemstellung hergeleitet. Darauf aufbauend werden in den nachfolgenden Unterkapiteln die Grundlagen bezüglich der Nomenklatur gelegt.
+
+Im Rahmen dieses Kapitels wird zu Beginn im Rahmen der Motivation die Notwendigkeit für die Bearbeitung dieser Thematik hergeleitet. Darauf aufbauend wird im anschließenden Grundlagenteil, die benötigte Nomenklatur und das Verständnis für die Konzepte innerhalb dieses Themenbereichs gelegt. Abschließend erfolgt basierend auf den gesammelten Informationen der Übergang hin zum Hauptteil der Ausarbeitung.
 
 %------------------------------------------------------------------------------------------------
 \subsection{Motivation}
 \label{sec:Einleitung:ssec:Motivation}
 %------------------------------------------------------------------------------------------------
-\noindent
+
 Das \ac{iot} und dessen Anwendungen nehmen im Rahmen der immer weiter voranschreitenden Entwicklungen im Bereich kleinster Sensoren und hochleistungsfähiger Chips eine immer wichtigere Rolle in der Kontrolle und Steuerung komplexer Systeme ein. 
-Ihr Einsatz reicht von der Implementierung in hochautomatisierten Fertigungsstraßen bis hin zu kleinsten medizinischen Geräten, die innerhalb oder als Peripherie durch den Menschen genutzt werden können. Über die Sensoren können somit gezielt Daten aus deren Umfeld erhoben und für spätere Optimierungen analysiert werden. Im industriellen Bereich wären dies zum Beispiel die Möglichkeiten zur gezielteren Wartung von einzelnen Fertigungsanlagen, auch als Predictive Maintenance bekannt, oder der fein-granulareren Überwachung von einzelnen Produktionsschritte. 
-Aufgrund ihrer Allgegenwärtigkeit, auch innerhalb des privaten Bereichs, sammeln die "intelligenten" Sensoren neben rein technischen Daten auch unweigerlich Daten, die im Zusammenhang mit menschlichen Nutzern stehen. Diese sogenannten \ac{pii} sind eine besondere Kategorie von Informationen, die es ermöglichen Rückschlüsse auf den Nutzer zu ziehen. Aus diesem Grunde sind sie, insbesondere in der heutigen Zeit, besonders schützenswert.
-Genau aus diesem Grund, wurden rechtliche Rahmenbedingungen, wie zum Beispiel die \ac{gdpr} auf europäischer Ebene geschaffen, die die Handhabung solcher Daten vorschreibt. Jedoch liegt die Einhaltung dieser Formalitäten stets bei den Herstellern von Smart Devices. Eine Überprüfung der Umsetzung innerhalb der einzelnen Geräte und ihrer Applikationen liegt im Vertrauen des Nutzers und muss für jedes Gerät im Einzelfall geprüft werden.
-Betreffend dieser Fragestellung bezüglich der Umsetzung von Privatsphäre und Datensicherheit in der Welt der \acs{iot} und deren Applikationen werden in den nachfolgenden Kapiteln die bisherigen Ergebnisse zu dieser Thematik zusammengefasst und eine abschließende Bewertung des derzeitigen Standes erstellt.
-
-%------------------------------------------------------------------------------------------------
-\subsection{Grundlagen}
-\label{sec:Einleitung:ssec:Grundlagen}
-%------------------------------------------------------------------------------------------------
-
-Für eine bessere Verortung der einzelnen Begrifflichkeiten aus dem Bereich des \acs{iot} und der Privatsphäre und Datensicherheit werden im nachfolgenden Kapitel die Grundlagen gelegt.
-
-%------------------------------------------------------------------------------------------------
-\subsubsection{Geräte des \acl{iot}}
-\label{sec:Einleitung:ssec:Grundlagen:sssec:Geräte des Internet of Things}
-%------------------------------------------------------------------------------------------------
-Innerhalb des \acl{iot} sind Geräte unterschiedlichster Art miteinander in Interaktion. Hierbei reicht die Bandbreite von Gadgets des alltäglichen Gebrauchs, u.a. Mobiltelefone oder Smart Watches, bis hin zu vollumfänglichen Robotern, die über Kameras und Sensoren mit ihrer Umwelt interagieren.
-
-%------------------------------------------------------------------------------------------------
-\subsubsection{Klassifikation von Daten}
-\label{sec:Einleitung:ssec:Grundlagen:sssec:Klassifikation von Daten}
-%------------------------------------------------------------------------------------------------
-Wie bereits in \fullref{sec:Einleitung:ssec:Motivation} erwähnt, können die gesammelten Daten auf Basis ihres Informationsgehaltes in unterschiedliche Kategorien eingeteilt werden. Hierzu kann in die nachfolgenden Kategorien von \ac{pii} und \ac{nonpii} im gröbsten Sinne unterschieden werden. Bei genauerer Betrachtung können diese generalisierten Klassen weiter ausdifferenziert werden. Im Rahmen dieser Arbeit wird jedoch nur in die beiden genannten Arten unterschieden. Jede dieser Klassen besitzt neben der für sie einzigartigen Information einen anderen Anspruch an deren Schutz.
-
-%------------------------------------------------------------------------------------------------
-\paragraph{\acf{pii}}
-\label{sec:Einleitung:ssec:Grundlagen:sssec:Klassifikation von Daten:para:PII}
-%------------------------------------------------------------------------------------------------
-Die \ac{pii} beschreiben eine Information, die Daten enthält, die wiederum auf eine Person zurückgeführt werden können, von der die Daten gesammelt wurden. Die Gefahren, die mit dieser Art von Daten verbunden sind, werden im nachfolgenden Unterkapitel genauer beschrieben. Klassische Beispiele für \acs{pii} sind zum Beispiel:
-\begin{itemize}
-\item Vorname und Nachname
-\item E-Mail Adresse
-\item ...
-\end{itemize}
-
-%------------------------------------------------------------------------------------------------
-\paragraph{\acf{nonpii}}
-\label{sec:Einleitung:ssec:Grundlagen:sssec:Klassifikation von Daten:para:Non-PII}
-%------------------------------------------------------------------------------------------------
-
-%------------------------------------------------------------------------------------------------
-\subsubsection{Gefahren für die Privatsphäre}
-\label{sec:Einleitung:ssec:Grundlagen:sssec:Gefahren für die Privatsphäre}
-%------------------------------------------------------------------------------------------------
-
-%------------------------------------------------------------------------------------------------
-\subsubsection{\acf{gdpr}}
-\label{sec:Einleitung:ssec:Grundlagen:sssec:Klassifikation von Daten:para:GDPR}
-%------------------------------------------------------------------------------------------------
-
+Ihr Einsatz reicht von der Implementierung in hochautomatisierten Fertigungsstraßen bis hin zu kleinsten medizinischen Geräten, die innerhalb oder als Peripherie durch den Menschen genutzt werden können. Über die Sensoren können somit gezielt Daten aus deren Umfeld erhoben und für spätere Optimierungen analysiert werden. Im industriellen Bereich wären dies zum Beispiel die Möglichkeiten zur gezielteren Wartung von einzelnen Fertigungsanlagen, auch als Predictive Maintenance bekannt, oder der fein-granularen Überwachung von einzelnen Produktionsschritten. 
+Aufgrund ihrer Allgegenwärtigkeit, auch innerhalb des privaten Bereichs, sammeln diese Geräte neben rein technischen auch unweigerlich Daten, die im Zusammenhang mit menschlichen Nutzern stehen. Diese sogenannten \ac{pii} sind eine besondere Kategorie von Informationen, die es ermöglichen Rückschlüsse auf den jeweiligen Nutzer zu ziehen. Aus diesem Grunde sind sie, insbesondere in der heutigen Zeit, besonders schützenswert.
+Genau aus diesem Grund entstanden rechtliche Rahmenbedingungen, wie zum Beispiel die \ac{gdpr} auf europäischer Ebene \cite{dsgvo2016}, die die Handhabung solcher Daten reguliert. Jedoch liegt die Einhaltung dieser Formalitäten stets bei den Herstellern von Smart Devices und deren Applikationen. Eine Überprüfung der Umsetzung innerhalb der einzelnen Geräte und ihrer Applikationen liegt im Vertrauen des Nutzers und muss für jedes Gerät im Einzelfall geprüft werden.

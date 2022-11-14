@@ -17,7 +17,8 @@
 \usepackage[T1]{fontenc}
 
 % Used for displaying a sample figure. If possible, figure files should be included in EPS format.
-\usepackage{graphicx} 
+\usepackage{graphicx}
+\graphicspath{ {./sections/} }
 	
 % Reference configuration
 \usepackage[
@@ -73,7 +74,7 @@ sorting=ynt % sorting options: https://de.overleaf.com/learn/latex/Articles/Gett
 %----------------------------------------------------------------------------------------
 
 \begin{abstract}
-Im Rahmen ihrer Funktion sammeln Geräte und Anwendungen innerhalb des Internet of Things (IoT) beständig Daten ihrer Umgebung. Hierbei kann es sich um Daten von äußeren Gegebenheiten, wie z.B. ihrer direkten Umgebung, oder auch um personenbezogene Daten handeln. Hieraus ergeben sich jedoch starke Eingriffe in die Selbstbestimmung der Nutzer, die zu jeder Zeit die Möglichkeit besitzen sollten, den Umfang und die Art der Daten zu kontrollieren, die über sie gesammelt werden. Teil dieser Ausarbeitung ist die Analyse der gesammelten Daten, die im Bereich Smart Home und Smart City von den Nutzern gesammelt wird und deren Einhaltung von rechtlichen Rahmenbedindngungen, wie z.B. der Datenschutz Grundverordnung.
+Die Nutzung von Geräten des \ac{iot} besteht hauptsächlich darin, Informationen ihrer Umgebung zu sammeln, um diese übergeordneten Applikationen für die Bereitstellung von Diensten für zum Beispiel Handlungsempfehlungen zur Verfügung zu stellen. Hierbei kann es sich einerseits um rein technische Daten, wie zum Beispiel Metriken von Sensoren hochmoderner Fertigungsstraßen, oder auch um personenbezogenes Material aus der Interaktion mit den Geräten innerhalb des privaten oder geschäftlichen Kontextes handeln. Auf Basis der aktuellen Rechtssprechung ergeben sich hieraus starke Eingriffe in die Selbstbestimmung der Nutzer, die bezüglich der Erhebung von persönlichen Informationen, zu jeder Zeit die Möglichkeit besitzen sollten, den Umfang und die Art der Daten zu kontrollieren, die über sie gesammelt werden. Ziel dieser Ausarbeitung ist, basierend auf der derzeit geltenden gesetzlichen Regelung innerhalb des europäischen Raum zu evaluieren, in welchem Rahmen persönliche Informationen von IoT-Geräten (unkontrolliert) gesammelt werden. Bezüglich der höheren Interaktion von Geräten mit ihren Nutzern im Bereich Smart Home und dem übergeordneten Kontext der Smart City, sind ausschließlich Geräte und Applikationen aus diesem Zusammenhang Teil der Analyse.
 
 \keywords{Internet of Things  \and Datenschutz \and Privatsphäre \and GDPR \and Smart Home \and Smart City.}
 \end{abstract}
@@ -89,6 +90,7 @@ Im Rahmen ihrer Funktion sammeln Geräte und Anwendungen innerhalb des Internet 
 \newpage
 
 \import{sections/introduction/}{introduction.tex}
+\import{sections/fundamentals/}{fundamentals.tex}
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
