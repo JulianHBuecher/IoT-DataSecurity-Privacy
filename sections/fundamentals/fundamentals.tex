@@ -6,19 +6,19 @@
 \label{sec:Grundlagen}
 %------------------------------------------------------------------------------------------------
 
-Innerhalb dieses Kapitels werden zu Beginn die notwendige Nomenklatur für die Bestandteile des \ac{iot} und deren Funktion eingeführt. Im Anschluss an die Einführung in die Grundlagen bezüglich des Gebiets \ac{iot} werden die derzeit existierenden Regelwerke für die Bewertung der Einhaltung von Datensicherheit und Privatsphäre genauer betrachtet. Bezüglich der Definition von zu schützenswerten Informationen, werden basierend auf der folgenden Analyse die Variante der europäischen Rechtssprechung beschrieben. Abschließend erfolgt eine Auflistung von Gefahren, die resultierend aus ungemäßem Umgang mit \ac{pii} für den einzelnen Nutzer von \ac{iot}-Geräten entstehen kann.
+Innerhalb dieses Kapitels werden zu Beginn die notwendige Nomenklatur für die Bestandteile des \ac{iot} und deren Funktion eingeführt. Im Anschluss an die Einführung in die Grundlagen bezüglich des Gebiets \ac{iot} werden die derzeit existierenden Regelwerke für die Bewertung der Einhaltung von Datensicherheit und Privatsphäre genauer betrachtet. Bezüglich der Definition von zu schützenswerten Informationen, wird basierend auf der folgenden Analyse die Variante der europäischen Rechtssprechung beschrieben. Abschließend erfolgt eine Auflistung von Gefahren, die resultierend aus ungemäßem Umgang mit \ac{pii} oder auch personenbezogenen Daten für den einzelnen Nutzer von \ac{iot}-Geräten entstehen können.
 
 %------------------------------------------------------------------------------------------------
 \subsection{Geräte des \acl{iot}}
 \label{sec:Grundlagen:sssec:Geräte des Internet of Things}
 %------------------------------------------------------------------------------------------------
 
-Beginnend mit der Definition eines Geräts aus dem Bereich \ac{iot}, oder auch kurz Smart Device. Diesbezüglich findet sich in der Literatur unterschiedlichste Arten von Interpretationen. Grundlegend gilt, dass innerhalb des \acs{iot} Geräte verschiedenster Art miteinander in Interaktion treten. Hierbei reicht die Bandbreite von Gadgets des alltäglichen Gebrauchs, u.a. Mobiltelefone oder Smart Watches, bis hin zu autonomen Robotern aus der Industrie 4.0, die über Kameras und Sensoren ihre Umwelt in Wechselwirkung treten \cite{Li2015}. Dies geschieht hierbei ohne jegliches Zutun eines Menschen über das Internet. Architektonisch lässt sich das \ac{iot} in drei Schichten unterteilen. Diese können basierend auf der Definition von \cite{Seliem2018} folgendermaßen darstellen:
+Als Voraussetzung für die Verwendung der Begrifflichkeit eines Geräts aus dem Bereich \ac{iot}, oder auch Smart Device genannt, folgt nun eine annäherungsweise Definition dessen. Bedingt durch deren Vielseitigkeit gibt es diesbezüglich unterschiedlichste Arten von Interpretationen. Grundlegend gilt, dass innerhalb des \acs{iot} Geräte verschiedenster Art miteinander in Interaktion treten. Hierbei reicht die Bandbreite von Gadgets des alltäglichen Gebrauchs, u.a. Mobiltelefone oder Smart Watches, bis hin zu autonomen Robotern aus der Industrie 4.0, die über Kameras und Sensoren mit ihrer Umwelt in Wechselwirkung treten \cite{Li2015}. Dies geschieht hierbei ohne jegliches Zutun eines Menschen über das Internet oder ein internes Netzwerk. Architektonisch lässt sich das \ac{iot} in drei Schichten unterteilen. Diese können basierend auf der Definition von \cite{Seliem2018} folgendermaßen darstellen:
 
 \begin{itemize}
 \item Die \textbf{Geräte-Schicht} (Device Layer) beschreibt hierbei die Schicht mit allen physikalischen Ressourcen, die Daten sammeln und regulieren. Diese Schicht beinhaltet somit die Grundgesamtheit aller heterogenen und ressourcenbeschränkten Geräte.
 \item Die \textbf{Plattform-Schicht} (Platform Layer) repräsentiert die klassischen Netzwerk-Schicht (Network Layer) im OSI Modell. Diese Schicht integriert die notwendige Vorverarbeitung der Daten und reduziert somit die Anforderungen an die Ressourcen innerhalb der Applikation-Schicht.
-\item Die \textbf{Applikation-Schicht} (Application Layer) setzt sich wiederum aus zwei Teilen zusammen. Auf der einen Seite die Unterstützungsschicht (Support Layer), auf der das Edge Computing und die analytischen Dienste laufen und auf der anderen Seite die Applikation-Dienst-Schicht (Application Service Layer), die die notwendige Unterstützung bezüglich der Rechenressourcen für die \ac{iot} Infrastruktur bereitstellt.
+\item Die \textbf{Applikation-Schicht} (Application Layer) setzt sich wiederum aus zwei Teilen zusammen. Auf der einen Seite die Unterstützungsschicht (Support Layer), auf der das Edge Computing und die analytischen Dienste betrieben werden und auf der anderen Seite die Applikation-Dienst-Schicht (Application Service Layer), die die notwendige Unterstützung bezüglich der Rechenressourcen für die \ac{iot} Infrastruktur bereitstellt.
 \end{itemize}
 
 \begin{figure}
@@ -34,21 +34,21 @@ Wie bereits in der Illustration \ref{fig:drei-schichten-iot} angedeutet, lassen 
 \label{sec:Grundlagen:ssec:Rechtliche Rahmenbedingungen}
 %------------------------------------------------------------------------------------------------
 
-Der gesetzliche Kontext für die Regulation und Einhaltung der Datenschutzrichtlinien wird im europäischen Raum durch die \acl{gdpr} bzw. \acl{dsgvo}. Innerhalb dieses Regelwerkes werden die Akteure und deren Regeln und Pflichten im Umgang mit \ac{pii} und \ac{nonpii} beschrieben und somit sichergestellt, dass bestimmte Standards an Sicherheit und Privatsphäre länderübergreifend umgesetzt werden. Im Gegensatz zu dem klaren Rahmenwerk in der \ac{eu} existieren im angloamerikanischen Raum wiederum die Regeln der \acl{ftc}. Nachfolgend werden diese Rahmenwerke beziehungsweise Institutionen nochmals genauer beschrieben.
+Zur grundlegenden Bewertung und Einordnung der erhobenen Datenklassen besteht die Möglichkeit je nach Rechtssystem unterschiedliche Regularien anzuwenden. Die beiden wichtigsten Vertreter ihrer Art sind einerseits die \acl{gdpr} beziehungsweise \acl{dsgvo} innerhalb des europäischen Rechtssystems und die \acl{ftc} als staatliche Institution, die die Interessen der US-Bürger in unterschiedlichen Ressorts bedient. Für beide Vertreter gilt, dass sie den Umgang mit \ac{pii}, \ac{nonpii} und personenbezogenen Daten beschreiben und somit sicherstellen möchten, dass bestimmte Standards an Sicherheit und Privatsphäre umgesetzt werden. Die genaue Abgrenzung hinsichtlich der Unterschiede zwischen den beiden gewählten Vertretern wird in den nachfolgenden Unterkapiteln nochmals genauer erläutert.
 
 %------------------------------------------------------------------------------------------------
 \subsubsection{\acl{gdpr}}
 \label{sec:Grundlagen:ssec:Rechtliche Rahmenbedingungen:sssec:GDPR}
 %------------------------------------------------------------------------------------------------
 
-Durch Inkrafttreten der \ac{gdpr} / \ac{dsgvo} am 25.05.2018 wurde von der \acl{eu} ein einheitlicher Katalog an Regeln geschaffen, der den allgemeinen Umgang bezüglich der Erhebung und der Verarbeitung von Daten im europäischen Raum beschreibt. Ziel sind hierbei (global) Unternehmen und Einrichtungen, die innerhalb der \acl{eu} als Teil ihrer Dienstleistung Daten von \ac{eu}-Bürgern erheben und diese verarbeiten. Als Nachfolger der Data Protection Directive 95/46/EC löste sie diese mit der erstmaligen Einführung der \ac{gdpr} 2016/679 am 24.05.2016 bereits ab. Zweck dieses Rahmenwerkes war die Harmonisierung der Datenschutz- und Privatsphäre-Regelungen innerhalb der europäischen Union \cite{Bastos2019}.
+Durch Inkrafttreten der \ac{gdpr} / \ac{dsgvo} am 25.05.2018 wurde von der \acl{eu} ein einheitlicher Katalog an Regeln geschaffen, der den allgemeinen Umgang bezüglich der Erhebung und der Verarbeitung von Daten im europäischen Raum beschreibt. Ziel sind hierbei (globale) Unternehmen und Einrichtungen, die innerhalb der \acl{eu} als Teil ihrer Dienstleistungen Daten von \ac{eu}-Bürgern erheben und diese verarbeiten. Als Nachfolger der Data Protection Directive 95/46/EC löste sie diese mit der erstmaligen Einführung der \ac{gdpr} 2016/679 am 24.05.2016 bereits ab. Zweck dieses Rahmenwerkes war die Harmonisierung der Datenschutz- und Privatsphäre-Regelungen innerhalb der europäischen Union \cite{Bastos2019}.
 
 Neben der Definition von zentralen Begrifflichkeiten und Eckpunkten stehen die Formulierung von Prinzipien im Mittelpunkt des Gesetzestextes. Zur Einordnung dieser, wird beginnend mit der nachfolgenden Auflistung ein Überblick über die beteiligten rechtlichen Entitäten auf Basis von \cite{DSGVOArt4} gegeben.
 
 \begin{itemize}
-\item \textbf{\acl{ds} / \textbf{betroffene Person} beschreibt eine natürliche Person im Kontext des jeweiligen Rechtsstaates.
-\item \textbf{\acl{dc} / \textbf{Verantwortlicher} beschreibt eine natürliche oder rechtliche Person, die den Zweck und den Vorgang der Verarbeitung der persönlichen Daten definiert.
-\item \textbf{\acl{dp} / \textbf{Auftragsverarbeiter} beschreibt eine natürliche oder rechtliche Person, die auf Anordnung des \textbf{Verantwortlichen} die persönlichen Daten verarbeitet.
+\item \textbf{\acl{ds}} / \textbf{betroffene Person} beschreibt eine natürliche Person im Kontext des jeweiligen Rechtsstaates.
+\item \textbf{\acl{dc}} / \textbf{Verantwortlicher} beschreibt eine natürliche oder rechtliche Person, die den Zweck und den Vorgang der Verarbeitung der persönlichen Daten definiert.
+\item \textbf{\acl{dp}} / \textbf{Auftragsverarbeiter} beschreibt eine natürliche oder rechtliche Person, die auf Anordnung des \textbf{Verantwortlichen} die persönlichen Daten verarbeitet.
 \end{itemize}
 
 Im späteren Verlauf dieser Arbeit werden für das bessere Verständnis nur noch die Abkürzungen der englischen Bezeichnungen für die Akteure verwendet. Darauf aufbauend stehen die Grundprinzipien der \ac{dsgvo} als Wegweiser für die Rechte dieser "Personen". Nachfolgend aufgelistet stehen die \textbf{sieben} Grundprinzipien, die im Rahmen der Datenverarbeitung durch \textbf{Verantwortliche} und \textbf{Auftragsverarbeiter} einzuhalten sind. Die Formulierungen sind anhand von \cite{DSGVOArt5} präzisiert worden:
@@ -60,7 +60,7 @@ Im späteren Verlauf dieser Arbeit werden für das bessere Verständnis nur noch
 \item \textbf{Accuracy} / \textbf{Richtigkeit} \\ Die Daten müssen in korrekter Form vorliegen und auf dem aktuellen Stand gehalten werden. Alle nicht korrekten Einträge müssen gelöscht werden.
 \item \textbf{Storage Limitation} / \textbf{Speicherbegrenzung} \\ Die Daten dürfen nur so lange gespeichert werden, wie es dem Zweck der Verarbeitung dient.
 \item \textbf{Integrity and Confidentiality} / \textbf{Integrität und Vertraulichkeit} \\ Die Verarbeitung der Daten muss so gestaltet werden, dass ein bestimmtes Maß an Sicherheit gewährleistet werden kann, um unbefugten Zugriff oder Verlust zu vermeiden.
-\item \textbf{Accountability} / \textbf{Rechenschaftspflicht} \\ Der \textbf{\ac{ac}} ist für die Einhaltung der obigen \textbf{sechs} Prinzipien verantwortlich und muss dies nachweisen können.
+\item \textbf{Accountability} / \textbf{Rechenschaftspflicht} \\ Der \textbf{\ac{dc}} ist für die Einhaltung der obigen \textbf{sechs} Prinzipien verantwortlich und muss dies nachweisen können.
 \end{itemize}
 
 %------------------------------------------------------------------------------------------------
@@ -68,33 +68,116 @@ Im späteren Verlauf dieser Arbeit werden für das bessere Verständnis nur noch
 \label{sec:Grundlagen:ssec:Rechtliche Rahmenbedingungen:sssec:FTC}
 %------------------------------------------------------------------------------------------------
 
-Im Vergleich zur \fullref{sec:Grundlagen:ssec:Rechtliche Rahmenbedingungen:sssec:GDPR} aus dem vorherigen Unterkapitel, steht bei der \acl{ftc) eine politische Institution hinter der Regulation der Datensicherheit und Privatsphäre in Amerika. Dabei kümmert sich die \ac{ftc} nicht nur ausschließlich um die Einhaltung von Datenschutz und Privatsphäre, sondern bedient auch andere Ressorts im Bereich des Schutzes der Öffentlichkeit vor nicht-rechtsmäßigen Geschäftsmethodiken. Hierbei umspannt der abdeckte Rahmen von der Beratung von Endkunden bezüglich Einkauf, Krediten und Identitätsdiebstahl bis hin zu Beratung im wirtschaftlichen Kontext. Somit beschreibt die \ac{ftc} nicht nur die Regeln, sondern kann diese auch effektiv umsetzen \cite{FTC}. Als gleichwertiges Organ kann hier die \textbf{\textit{Abteilung für Recht der Europäischen Kommission}} gesehen werden \cite{FTCEU}.
+Im Vergleich zur \fullref{sec:Grundlagen:ssec:Rechtliche Rahmenbedingungen:sssec:GDPR} aus dem vorherigen Unterkapitel, steht bei der \acl{ftc} eine politische Institution hinter der Regulation der Datensicherheit und Privatsphäre in Amerika. Dabei kümmert sich die \ac{ftc} nicht nur ausschließlich um die Einhaltung von Datenschutz und Privatsphäre, sondern bedient auch andere Ressorts im Bereich des Schutzes der Öffentlichkeit vor nicht-rechtsmäßigen Geschäftsmethodiken. Hierbei umspannt der abgedeckte Rahmen von der Beratung von Endkunden bezüglich Einkauf, Krediten und Identitätsdiebstahl bis hin zu Thematiken im wirtschaftlichen Kontext. Somit beschreibt die \ac{ftc} nicht nur die Regeln, sondern kann diese auch effektiv umsetzen \cite{FTC}. Als gleichwertiges Organ kann hier die \textbf{\textit{Abteilung für Recht der Europäischen Kommission}} gesehen werden \cite{FTCEU}.
+Zu beachten ist, dass innerhalb des amerikanischen Rechtssystems kein zentrales Organ über alle Bundesstaaten hinweg definiert ist, das die Einhaltung dieser Regeln reguliert. Allgemein gilt, dass jedes amerikanische Unternehmen ihre Ansprüche an den Datenschutz und die Privatsphäre selbst definiert und deren Einhaltung reguliert. Kommt es diesen selbsterlegten Anforderungen nicht nach, ist mit keinen Disziplinarmaßnahmen von Seiten des Staates zu rechnen \cite{DatenschutzOrg2022}.
 
 %------------------------------------------------------------------------------------------------
 \subsection{Klassifikation von Daten}
 \label{sec:Grundlagen:ssec:Klassifikation von Daten}
 %------------------------------------------------------------------------------------------------
 
-Wie bereits in \fullref{sec:Einleitung:ssec:Motivation} erwähnt, können die gesammelten Daten auf Basis ihres Informationsgehaltes in unterschiedliche Kategorien eingeteilt werden. Hierzu kann in die nachfolgenden Kategorien von \ac{pii} und \ac{nonpii} im gröbsten Sinne unterschieden werden. Bei genauerer Betrachtung können diese generalisierten Klassen weiter ausdifferenziert werden. Im Rahmen dieser Arbeit wird jedoch nur in die beiden genannten Arten unterschieden. Jede dieser Klassen besitzt neben der für sie einzigartigen Information einen anderen Anspruch an deren Schutz.
+Wie bereits in \fullref{sec:Einleitung:ssec:Motivation} erwähnt, können die gesammelten Daten auf Basis ihres Informationsgehaltes in unterschiedliche Kategorien eingeteilt werden. Neben der Einteilung in \ac{pii} und \ac{nonpii} wird des weiteren in personenbezogene , nicht personenbezogene, anonymisierte und pseudonymisierte Daten unterschieden.
 
 %------------------------------------------------------------------------------------------------
 \subsubsection{\acf{pii}}
 \label{sec:Grundlagen:ssec:Klassifikation von Daten:sssec:PII}
 %------------------------------------------------------------------------------------------------
-Die \ac{pii} beschreiben eine Information, die Daten enthält, die wiederum auf eine Person zurückgeführt werden können, von der die Daten gesammelt wurden. Die Gefahren, die mit dieser Art von Daten verbunden sind, werden im nachfolgenden Unterkapitel genauer beschrieben. Klassische Beispiele für \acs{pii} sind zum Beispiel:
+Der Begriff der \ac{pii} stammt ursprünglich aus dem angloamerikanischen Raum und wird innerhalb unterschiedlichster amerikanischer Institutionen verwendet und redefiniert. Aus diesem Grunde liegt dieser Klassifikation auch keine einheitliche Definition zugrunde. Basierend auf der Handreichung der \ac{nist} handelt es sich bei \acs{pii} um Informationen, die es ermöglichen Rückschlüsse auf die Person zu ziehen, von der die Daten stammen \cite{PiwikPro2022,NIST2010}. Des Weiteren findet eine weitere Unterteilung in sogenannte \textbf{verknüpfbare Informationen} und \textbf{verknüpfte Informationen} statt. Nachfolgend werden je Kategorie Beispiele aufgeführt:
+
 \begin{itemize}
-\item Vorname und Nachname
-\item E-Mail Adresse
-\item ...
+	\item \textbf{verknüpfte Informationen}:
+		\begin{itemize}
+			\item (vollständiger) Name
+			\item E-Mail Adresse
+			\item Cookies
+			\item Geräte-ID
+		\end{itemize}
+	\item \textbf{verknüpfbare Informationen}:
+		\begin{itemize}
+			\item Vorname oder Nachname
+			\item Land, Bundesland, Stadt, PLZ
+			\item Geschlecht
+			\item Rasse
+		\end{itemize}
 \end{itemize}
+
+Im Vergleich zu persönlichen Daten im Sinne der \ac{dsgvo} umfassen die \acs{pii} deutlich weniger Daten, die in diese Kategorie fallen.
+
 
 %------------------------------------------------------------------------------------------------
 \subsubsection{\acf{nonpii}}
 \label{sec:Grundlagen:ssec:Klassifikation von Daten:sssec:Non-PII}
 %------------------------------------------------------------------------------------------------
 
+Im Kontrast zu den \ac{pii} stellen die \ac{nonpii} eine Klasse an Daten dar, deren alleinstehende Verwendung kein Tracking oder eine Identifikation eines Individuums erlaubt. Beispielsweise gehören für manche AdTech-Unternehmen die Informationen wie zum Beispiel Geräte-ID oder Cookies bereits zu den \ac{nonpii} und nicht mehr zu den \ac{pii}. Diese Abweichungen sind im amerikanischen Gesetzeskontext durchaus häufiger und müssen somit für jeden Einzelfall geprüft werden. Zur Kategorie von \ac{nonpii} gehören nach \cite{PiwikPro2022} unter anderem:
+
+\begin{itemize}
+	\item Aggregierte Statisktiken zur Nutzung von Produkten
+	\item Teilweise oder vollständig maskierte IP-Adressen
+\end{itemize}
+
+%------------------------------------------------------------------------------------------------
+\subsubsection{Personenbezogene Daten}
+\label{sec:Grundlagen:ssec:Klassifikation von Daten:sssec:Personenbezogene Daten}
+%------------------------------------------------------------------------------------------------
+
+Personenbezogene Daten "[beschreiben] alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person [...] beziehen" \cite{DSGVOArt4}. Somit gehören zum Beispiel auch Cookies, Geräte-IDs und IP-Adressen zu den schützenswerten Informationen, womit sich die \ac{dsgvo} deutlich von ihrem amerikanischen Äquivalent unterscheidet. Beispiele für personenbezogene Daten sind nach \cite{PiwikPro2022} oder \cite{DSGVOPerDa}:
+
+\begin{itemize}
+	\item IP-Adresse
+	\item Cookie
+	\item Standortdaten
+	\item Webekennung des Handys
+\end{itemize}
+
+Wie aus den Beispielen bereits abgeleitet werden kann, handelt es sich somit bei der \ac{dsgvo} um eine striktere Fassung des amerikanischen Katalogs.
+
+%------------------------------------------------------------------------------------------------
+\subsubsection{Anonymisierte Daten}
+\label{sec:Grundlagen:ssec:Klassifikation von Daten:sssec:Anonymisierte Daten}
+%------------------------------------------------------------------------------------------------
+
+Bei anonymisierten Daten handelt es sich um nicht personenbezogene Daten. Unter Verwendung dieser Art von Informationen kann keinerlei Person identifiziert werden oder mit den Daten in Bezug gebracht werden. Aus diesem Grund wird die Handhabung von anonymen Daten von der \ac{dsgvo} auch nicht weiter reguliert. Dies ist zum Beispiel mittels des Erwägungsgrundes 26 \cite{DSGVOEg26} innerhalb der \ac{dsgvo} geregelt. Beispiele für anonymisierte Daten sind somit den Referenzen aus \fullref{sec:Grundlagen:ssec:Klassifikation von Daten:sssec:Non-PII} gleichzusetzen.
+
+%------------------------------------------------------------------------------------------------
+\subsubsection{Pseudonymisierte Daten}
+\label{sec:Grundlagen:ssec:Klassifikation von Daten:sssec:Pseudonymisierte Daten}
+%------------------------------------------------------------------------------------------------
+
+Mittels der Pseudonymisierung von Daten ist es für den Betrachter dieser Daten nicht mehr möglich, ohne die Verwendung von zusätzlichen Informationen einen Bezug zu einem spezifischen Individuum herzustellen \cite{DSGVOArt4}. Somit wird es möglich auch höchst sensible Daten durch eine Pseudonymisierung für die Verwendung in einem anderen Kontext freizugeben. Eine mögliche Anwendung ist zum Beispiel das gezielte Ersetzen von Informationsbestandteilen (personenbezogene Daten) durch berechnete Einträge oder Codes, die später eine erneute Substitution ermöglichen.
+
 %------------------------------------------------------------------------------------------------
 \subsection{Gefahren für die Privatsphäre}
 \label{sec:Grundlagen:ssec:Gefahren für die Privatsphäre}
 %------------------------------------------------------------------------------------------------
+
+Anhand der vorgestellten Datenkategorien in \ref{sec:Grundlagen:ssec:Klassifikation von Daten} werden nun die möglichen Gefahren für die Nutzer von \ac{iot} Geräten aufgezeigt und deren Auswirkungen, die im Rahmen der nachfolgenden Analyse für Geräte des Smart Home und Smart City Kontextes eine wichtige Rolle spielen. Aufgrund der Internationalisierung werden die Gefahren mit ihren englischen Titlen aufgeführt.
+
+%------------------------------------------------------------------------------------------------
+\subsubsection{(User) Identification}
+\label{sec:Grundlagen:ssec:Gefahren für die Privatsphäre:sssec:(User) Identification}
+%------------------------------------------------------------------------------------------------
+
+Die (User) Identification beschreibt die Möglichkeit zur Charakterisierung einer Person (oder einer Entität) anhand von personenbezogenen Daten (z.B. Name, Adresse oder Standort) und einer anschließenden Veröffentlichung deren Identität. Daraus resultierende Gefahren sind neben der Verletzung der Privatsphäre des Individuums zusätzlich das Ermöglichen weiterer Gefahren für den Nutzer. Dies könnte zum Beispiel das gezielte Sammeln von Informationen sein, die wiederum mit dem Nutzer in Verbindung gebracht werden können und somit eine gezieltes Profiling des Nutzers zur Folge hätten \cite{Seliem2018}.
+
+%------------------------------------------------------------------------------------------------
+\subsubsection{(User) Tracking}
+\label{sec:Grundlagen:ssec:Gefahren für die Privatsphäre:sssec:(User) Tracking}
+%------------------------------------------------------------------------------------------------
+
+Als Folge von \ref{sec:Grundlagen:ssec:Gefahren für die Privatsphäre:sssec:(User) Identification} besteht die Gefahr eines (User) Trackings. Hierbei werden die gesammelten Daten über einen bestimmten Nutzer, meist in Form von Standortdaten, dazu verwendet die Aufenthaltsorte des Nutzers zu lokalisieren. Hiermit ergeben sich für die unterschiedlichen Dienstbetreiber die Möglichkeit unter Verwendung von beispielsweise Machine Learning Algorithmen das Verhalten eines Nutzers zu lernen und ihm somit auf Basis seines Standorts gezielt Angebote zu unterbreiten \cite{Seliem2018}.
+
+%------------------------------------------------------------------------------------------------
+\subsubsection{Utility Monitoring and Controlling}
+\label{sec:Grundlagen:ssec:Gefahren für die Privatsphäre:sssec:Monitoring}
+%------------------------------------------------------------------------------------------------
+
+Durch Erhebung von Nutzungsdaten des Kunden mittels des verwendeten Gerätes lassen sich wiederum Rückschlüsse auf Muster innerhalb des Alltags des Individuums ziehen. Wenn diese Informationen unerlaubt erhoben werden, handelt es sich wiederum um einen direkten Eingriff in die Privatsphäre des Nutzers. Falls nun Angreifer Zugriff auf das Gerät eines Nutzers erhalten und die Kontrolle über das Gerät übernehmen.
+
+%------------------------------------------------------------------------------------------------
+\subsubsection{Profiling}
+\label{sec:Grundlagen:ssec:Gefahren für die Privatsphäre:sssec:Profiling}
+%------------------------------------------------------------------------------------------------
+
+Die Methodik des Profilings erstellt auf Basis aggregierter Daten ein Profil eines Nutzers, welches wiederum dazu verwendet werden kann ein genaues Bild davon zu erstellen, welche Interessen und Bedürfnisse der Nutzer hat. Somit lässt sich zum Beispiel der Besucher eines Online-Shops besser bewerben, wenn der E-Commerce Betreiber durch Verwenden von Daten aus dem Verlauf des Nutzers auf dessen Wünsche reagieren kann. Neben der Verwendung für Werbezwecke lassen sich mittels Profiling auch Rückschlüsse auf die politische, wie auch religiösen Ansichten eines Individuums ziehen \cite{Seliem2018}, womit tiefgreifene Verletzungen der Privatsphäre einhergen.
 
