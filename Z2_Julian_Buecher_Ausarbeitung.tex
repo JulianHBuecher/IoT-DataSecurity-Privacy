@@ -36,7 +36,7 @@ sorting=ynt % sorting options: https://de.overleaf.com/learn/latex/Articles/Gett
 % other packages
 \usepackage{import}
 % Abkuerzungsverzeichnis
-\usepackage[printonlyused]{acronym}
+\usepackage[nohyperlinks, printonlyused, nolist]{acronym}
 \usepackage{nameref}
 \usepackage{hyperref}
 
@@ -52,7 +52,7 @@ sorting=ynt % sorting options: https://de.overleaf.com/learn/latex/Articles/Gett
 %	DOCUMENT TITLE 
 %----------------------------------------------------------------------------------------
 
-\title{Datenschutz in IoT-Systemen und deren Anwendungen}
+\title{Datenschutz in IoT-Systemen \\und deren Anwendungen}
 %
 %\titlerunning{Abbreviated paper title}
 % If the paper title is too long for the running head, you can set
@@ -74,7 +74,7 @@ sorting=ynt % sorting options: https://de.overleaf.com/learn/latex/Articles/Gett
 %----------------------------------------------------------------------------------------
 
 \begin{abstract}
-Die Nutzung von Geräten des \ac{iot} besteht hauptsächlich darin, Informationen ihrer Umgebung zu sammeln, um diese übergeordneten Applikationen für die Bereitstellung von Diensten für zum Beispiel Handlungsempfehlungen zur Verfügung zu stellen. Hierbei kann es sich einerseits um rein technische Daten, wie zum Beispiel Metriken von Sensoren hochmoderner Fertigungsstraßen, oder auch um personenbezogenes Material aus der Interaktion mit den Geräten innerhalb des privaten oder geschäftlichen Kontextes handeln. Auf Basis der aktuellen Rechtssprechung ergeben sich hieraus starke Eingriffe in die Selbstbestimmung der Nutzer, die bezüglich der Erhebung von persönlichen Informationen, zu jeder Zeit die Möglichkeit besitzen sollten, den Umfang und die Art der Daten zu kontrollieren, die über sie gesammelt werden. Ziel dieser Ausarbeitung ist, basierend auf der derzeit geltenden gesetzlichen Regelung innerhalb des europäischen Raum zu evaluieren, in welchem Rahmen persönliche Informationen von IoT-Geräten (unkontrolliert) gesammelt werden. Bezüglich der höheren Interaktion von Geräten mit ihren Nutzern im Bereich Smart Home und dem übergeordneten Kontext der Smart City, sind ausschließlich Geräte und Applikationen aus diesem Zusammenhang Teil der Analyse.
+Die Nutzung von Geräten des \ac{iot} besteht hauptsächlich darin, Informationen ihrer Umgebung zu sammeln, um diese übergeordneten Applikationen für die Bereitstellung von Diensten im Rahmen Handlungsempfehlungen zur Verfügung zu stellen. Hierbei kann es sich einerseits um rein technische Daten, wie zum Beispiel Metriken von Sensoren hochmoderner Fertigungsstraßen, oder auch um personenbezogenes Material aus der Interaktion von menschlichen Nutzern mit den Geräten innerhalb des privaten oder geschäftlichen Kontextes handeln. Auf Basis der aktuellen Rechtssprechung resultieren hieraus besonders schwerwiegende Eingriffe in die Privatsphäre der Nutzer, die bezüglich der Erhebung von persönlichen Informationen, zu jeder Zeit die Möglichkeit besitzen sollten, den Umfang und die Art der Daten zu kontrollieren, die über sie gesammelt werden. Ziel dieser Arbeit ist es, basierend auf den derzeit geltenden gesetzlichen Regelungen innerhalb des europäischen Raum zu evaluieren, in welchem Rahmen persönliche Informationen von IoT-Geräten (unkontrolliert) gesammelt werden. Speziell werden aufgrund der höheren Interaktion von Gerät und Nutzer im Bereich Smart Home und der Smart City, ausschließlich Szenarien in diesem Zusammenhang analysiert.
 
 \keywords{Internet of Things  \and Datenschutz \and Privatsphäre \and GDPR \and Smart Home \and Smart City.}
 \end{abstract}
@@ -83,22 +83,22 @@ Die Nutzung von Geräten des \ac{iot} besteht hauptsächlich darin, Informatione
 %	DOCUMENT BODY
 %----------------------------------------------------------------------------------------
 
-\newpage
+%\newpage
 
 \import{shortages/}{shortages.tex}
 
-\newpage
+%\newpage
 
 \import{sections/introduction/}{introduction.tex}
 \import{sections/fundamentals/}{fundamentals.tex}
-\import{sections/mainpart/}{mainpart.tex}
+\import{sections/main/}{body.tex}
 \import{sections/ending/}{ending.tex}
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
 
-\newpage
+%\newpage
 
 \printbibliography
 
