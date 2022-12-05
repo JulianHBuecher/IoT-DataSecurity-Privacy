@@ -2,25 +2,18 @@
 %%
 
 %------------------------------------------------------------------------------------------------
-\section{Analyse der Datenschutz-Konformität}
-\label{sec:Analyse der Datenschutz-Konformität}
+\section{Analyse der Datenerhebung}
+\label{sec:Analyse der Datenerhebung}
 %------------------------------------------------------------------------------------------------
 
 Basierend auf den eingeführten Grundlagen aus \fullref{sec:Grundlagen} wird nachfolgend das Erheben der Daten im Rahmen der smarten Umgebungen \textbf{Smart Home} und \textbf{Smart City} betrachtet. Darauf aufbauend erfolgt eine kritische Auseinandersetzung hinsichtlich ihrer Konformität im Rahmen der \ac{dsgvo}, die in eine Vorstellung möglicher Handlungsempfehlungen und Optionen übergeht, die es den Nutzern ermöglichen soll, nach eigenem Ermessen die Erhebung der von ihren Geräten gesammelten Daten zu regulieren oder dementsprechende Vorkehrungen zu treffen, die über sie gesammelten Daten zu minimieren. Abschließend erfolgt eine Bewertung der gesammelten Ergebnisse mit einhergehender Beantwortung der aufgestellten \acl{rq}.
 
-%%------------------------------------------------------------------------------------------------
-%\subsection{Datenerhebung}
-%\label{sec:Hauptteil:ssec:Datenerhebung}
-%%------------------------------------------------------------------------------------------------
-%
-%Beginnend mit der Analyse der Datenerhebung anhand der einzelnen Geräte in den vorliegenden Kontexten. Die Wahl von \textbf{Smart City} und \textbf{Smart Home} als Gegenstand der Analyse wurde aufgrund der hohen Interaktionsrate zwischen den einzelnen Geräten und den \textbf{ds} gewählt. Neben Smart TVs, Smart Watches und Sensoren interagieren die Nutzer fast minütlich mit den entsprechenden Geräten.
-%
-%%------------------------------------------------------------------------------------------------
-%\subsubsection{Smart Home}
-%\label{sec:Hauptteil:ssec:Datenerhebung:sssec:Smart Home}
-%%------------------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------------------------
+\subsection{Smart Home}
+\label{sec:Analyse der Datenerhebung:ssec:Smart Home}
+%------------------------------------------------------------------------------------------------
 
-\noindent \textbf{Smart Home.}
+%\noindent \textbf{Smart Home.}
 Die Analyse der erhobenen Daten aus dem Bereich des Smart Home wird anhand der Veröffentlichungen \cite{Mandalari2021,Ren2019} durchgeführt. Fokus der beiden wissenschaftlichen Arbeiten war die Analyse der Dienstbereitstellung und der damit verbundenen Daten, die ausgehend von den \textbf{Smart Devices}, über das Netzwerk gesendet werden. Mittels dieser zugrundeliegenden Informationen konnte eine Betrachtung hinsichtlich der Einhaltung derzeit geltender Datenschutzrichtlinien durchgeführt werden.
 Da es sich bei den beiden angesprochenen Arbeiten um zwei voneinander unabhängige Experimente handelt, werden die Vorgehensweisen und die jeweiligen Resultate zur besseren Verständlichkeit separiert in...
 \begin{itemize}
@@ -33,7 +26,7 @@ Da es sich bei den beiden angesprochenen Arbeiten um zwei voneinander unabhängi
 Der exemplarische Aufbau der Testumgebung und der Durchführung der einzelnen Messungen kann anhand nachfolgender Abbilding \ref{fig:test-setup-proj1} beschrieben werden.
 \begin{figure}
     \centering
-    \includegraphics[scale=0.4]{main/pictures/countermeasures/IoTrimmer_IoTrigger}
+    \includegraphics[scale=0.35]{main/pictures/countermeasures/IoTrimmer_IoTrigger}
     \caption{High-Level Architektur der Testumgebung für die Analyse des Netzwerkverkehrs der \ac{iot}-Geräte auf Basis von \textbf{Projekt 1} \cite{Mandalari2021}}
     \label{fig:test-setup-proj1}
 \end{figure}
@@ -66,44 +59,64 @@ Mittels dieses Experimentes konnte basierend auf den Funktionen der 31 getestete
 
 \noindent Grundlegend ist der Versuchsaufbau derselbe geblieben und die Kategorisierung in die drei Endpunkt-Kategorien wurde aus dem vorherigen Projekt übernommen. Eine Erweiterung des Experimentes besteht in der Verknüpfung der beiden Testumgebungen durch einen VPN-Tunnel, um mögliches abweichendes Verhalten der Geräte in Abhängigkeit durch den Standort und somit auch die rechtlichen Regularien zu prüfen. Zudem wurde neben den bereits existierenden fünf Kategorien noch die Kategorie für \textbf{Heimgeräte} wie zum Beispiel Kühlschränke oder Waschmaschinen hinzugefügt, die eine Möglichkeit zur Steuerung über eine Nutzer-Schnittstelle auf dem Smartphone oder dem Web anbieten. Das Auslösen der einzelnen Aktivitäten, wie auch das Messen der Netzwerkaktivität der einzelnen Geräte im nicht benutzten Zustand ähnelt hierbei wieder dem ersten Projekt.
 
-\noindent Auffälligkeiten bezüglich der Ergebnisse aus \textbf{Projekt 2} sind, dass von der allgemeinen Grundgesamtheit 72 Geräte mindestens einen Endpunkt mit Daten versorgen, der nicht zu dem eigentlichen Gerätehersteller gehört. Des Weiteren senden 56\% der Geräte in den USA und 83.3\% in den UK Endpunkte außerhalb ihrer Region. Dieses Verhalten wird nachfolgend durch \ref{fig:traffic_flow} mit der Illustration des ausgehenden Verkehrs von den einzelnen Gerätekategorien in deren Ziel-Länder nochmals übersichtlicher dargestellt.
+\noindent Auffälligkeiten bezüglich der Ergebnisse aus \textbf{Projekt 2} sind, dass von der allgemeinen Grundgesamtheit 72 Geräte mindestens einen Endpunkt mit Daten versorgen, der nicht zu dem eigentlichen Gerätehersteller gehört. Des Weiteren senden 56\% der Geräte in den USA und 83.3\% in den UK Endpunkte außerhalb ihrer Region. Dieses Verhalten wird nachfolgend durch \ref{fig:traffic-flow} mit der Illustration des ausgehenden Verkehrs von den einzelnen Gerätekategorien in deren Ziel-Länder nochmals übersichtlicher dargestellt.
 \begin{figure}
     \centering
     \includegraphics[scale=0.3]{main/pictures/projekt_two/Traffic_Flow_Destinations}
     \caption{Darstellung des Volumens an Netzwerkverkehr ausgehend von den einzelnen Geräten von \textbf{Projekt 2} \cite{Ren2019}}
-    \label{fig:taffic_flow}
+    \label{fig:traffic-flow}
 \end{figure}
 
 \noindent Bezüglich dem Kontaktieren von \textbf{Support-} und \textbf{Third-Parties} wurde ein signifikanter Unterschied zwischen Geräten lokalisiert in den USA und in Europa identifiziert. In den meisten Fällen liegt hierbei die Rate von Geräten innerhalb der USA höher, wie im Vergleich zu ihren europäischen Gegenstücken. Eine genaue Auflistung der Menge an kontaktieren Endpunkten pro Gerätekategorie kann der nachfolgenden Tabelle \ref{table:non-first-party-by-device} entnommen werden. Die Deklarationen $US\cap$ $UK\cap$ beschreiben nur die Geräte, die in beiden Laboren vorkommen und die Deklaration $US \rightarrow UK$ und $UK \rightarrow US$ die Richtung des VPN-Tunnels aus dem jeweiligen Labor.
 
-\begin{table}
-    \includegraphics[width=\textwidth]{main/pictures/projekt_two/Non_First_Party_By_Category}
+\begin{table}[bp!]
     \caption{Menge an Support- und Third-Parties kontaktiert bei den einzelnen Geräte-Kategorien aus \textbf{Projekt 2} \cite{Ren2019}}
+    \includegraphics[width=\textwidth]{main/pictures/projekt_two/Non_First_Party_By_Category}
     \label{table:non-first-party-by-device}
 \end{table}
 
 \noindent Im Rahmen der Datenanalyse hinsichtlich dem Übertragen von \ac{pii} oder personenbezogenen Daten konnten nur wenige \ac{pii} innerhalb von unverschlüsseltem Netzwerkverkehr festgestellt werden. In vereinzelten Fällen tritt die Preisgabe von Geräte-ID, MAC-Adresse oder diversen UUIDs als unverschlüsselte Nachricht auf. Jedoch besteht bei 30 von 81 Geräten die Möglichkeit durch passives Mitschneiden von erzeugtem Datenfluss eine Rekonstruktion des Nutzerverhaltens, somit eine Kombination aus (User) Tracking und Profiling, durchzuführen. Zusätzlich konnte im Rahmen von unerwartetem Verhalten, das nicht von Nutzer initiiert wurde, bei drei Geräten ein Erhebung von Daten festgestellt werden, die nur teilweise dokumentiert und nicht durch eine Konfiguration des Gerätes durch den Nutzer deaktiviert werden kann. Hierbei handelt es sich nach der Definition der \ac{dsgvo} um personenbezogene Daten, die somit einen hohen Schutzstatus genießen. Die betreffenden Geräte und deren Geräte-Kategorie in Bezug auf deren Eigenheiten werden jedoch nicht als Teil dieser Arbeit genauer betrachtet und können in \cite{Ren2019} recherchiert werden.
 
-%%------------------------------------------------------------------------------------------------
-%\subsubsection{Smart City}
-%\label{sec:Hauptteil:ssec:Datenerhebung:sssec:Smart City}
-%%------------------------------------------------------------------------------------------------
-
-\noindent \textbf{Smart City.}
-Wie bereits in der Sektion \fullref{sec:Grundlagen} beschrieben, stellt die \textbf{Smart City} als übergeordneter Kontext den Zusammenschluss aus mehreren \textbf{Smart Environments} dar. Hingegen der Abgeschlossenheit einer \textbf{Smart Home} Umgebung ermöglicht sie, die Aggregation von Daten aus unterschiedlichen Bereichen des urbanen Lebens mit dem Ziel einer Verbesserung der Lebensqualität ihrer Einwohner. Die Konzepte dieses intelligenten Konstruktes beruhen somit auf einer besseren Interkonnektivität ihrer Teilkomponenten und einem daraus resultierenden erhöhtem Datenaustausch \cite{Stefanouli2019}. Diesbezüglich investieren weltweit Städte in den Ausbau und Einsatz von Technologien im Rahmen von Smart City Initiativen, um Problematiken wie zum Beispiel die Nachhaltigkeit hinsichtlich der Umwelt, dem Verkehrsaufkommen innerhalb der Stadt, der Optimierung des öffentlichen Transports und der Gesundheit ihrer Einwohner zu adressieren \cite{BCG2020}.
-Jedoch die Datenerhebung jeder einzelnen Applikation oder Systems innerhalb dieses Ökosystems zu analysieren und hinsichtlich ihrer Datenschutzkonformität zu bewerten, ist nicht Teil der hier vorliegenden Arbeit und kann als Bestandteil zukünftiger Forschungsfragen zur Bewertung spezieller Teilbereiche einer \textbf{Smart City} definiert werden. Aus diesem Grunde werden nachfolgend nun zwei Beispiele aus dem Bereich der \textbf{Smart Infrastructure} herausgegriffen, die als Teil der \textbf{Smart City} die auf Echtzeitdaten basierte Regulation des Verkehrs innerhalb einer Stadt zur Aufgabe hat.
- 
-% Beispiele für Smart City Applikationen
-
-% Erläuterung der BCG Analyse der Traffic App
-
-% Erläuterung der Smart Walk Projekts aus Hamburg
-
 %------------------------------------------------------------------------------------------------
-\subsection{Bewertung}
-\label{sec:Hauptteil:ssec:Bewertung}
+\subsection{Smart City}
+\label{sec:Analyse der Datenerhebung:ssec:Smart City}
 %------------------------------------------------------------------------------------------------
 
+%\noindent \textbf{Smart City.}
+Wie bereits in der Sektion \fullref{sec:Grundlagen} beschrieben, stellt die \textbf{Smart City} als übergeordneter Kontext den Zusammenschluss aus mehreren \textbf{Smart Environments} dar. Hingegen der Abgeschlossenheit einer \textbf{Smart Home} Umgebung ermöglicht sie, die Aggregation von Daten aus unterschiedlichen Bereichen des urbanen Lebens mit dem Ziel einer Verbesserung der Lebensqualität ihrer Einwohner. Die Konzepte dieses intelligenten Geflechts aus diversen Diensten in Kombination mit Sensoren beruhen somit auf einer besseren Interkonnektivität ihrer Teilkomponenten und einem daraus resultierenden erhöhtem Datenaustausch \cite{Stefanouli2019}. Diesbezüglich investieren weltweit Städte in den Ausbau und Einsatz von Technologien im Rahmen von Smart City Initiativen, um schwierige Aufgaben wie zum Beispiel die Nachhaltigkeit hinsichtlich der Umwelt, dem Verkehrsaufkommen innerhalb der Stadt, der Optimierung des öffentlichen Transports und der Gesundheit ihrer Einwohner zu adressieren \cite{BCG2020}.
+Im Kontext der Kategorisierung der erhobenen Daten eine Analyse jeder Applikation oder eines jeden Systems innerhalb dieser einzelnen Ökosysteme vorzunehmen und hinsichtlich ihrer Datenschutzkonformität zu prüfen, ist jedoch nicht Teil der hier vorliegenden Arbeit und kann als Bestandteil zukünftiger Forschungsfragen zur Bewertung spezieller Teilbereiche einer \textbf{Smart City} definiert werden.
+Um dennoch einen groben Überblick über die Applikationen innerhalb der einzelnen Querschnittsbereiche zu erlangen, werden diesbezüglich aus den bereits definierten fünf Bereichen einer Smart City jeweils ein Beispiel extrahiert und dieses anhand erhobener Daten analysiert und deren Funktionsweise vorgestellt.\\
+% Smart Energy: Smart Meter Beispiel
+\noindent \textbf{Smart Energy.}
+Bezüglich der Applikationen und Geräte des Teilbereichs \textbf{Smart Energy} findet das sogenannte \textbf{Smart Meter} innerhalb von \textbf{Smart Home} Instanzen häufigen Einsatz. Das Smart Meter beschreibt einen elektronischen Energiezähler, der in konfigurierbaren Intervallen automatisch den Energieverbrauch des jeweiligen Haushalts an den Energieversoger übermittelt. Weitere Funktionsmöglichkeiten sind die Auswertung der Daten beispielsweise über eine auf einem Computer im Heimnetzwerk installierte Software, um den persönlichen Stromverbrauch zu überwachen und in Kombination mit Solartechnologien einen Plan für die Verwendung von selbsterzeugtem Strom und dessen Rückeinspeisung in das Netz ermöglicht \cite{fox2010smart}. Die generierten Verbraucherprofile ermöglichen es den Netzbetreibern Lastprofile bezüglich ihrer Stromnetze zu erstellen und daraufhin durch Umleitungen aus weniger belasteten Bereichen des Netzes die Lastspitzen abzufangen. Somit findet eine Erhebung von Daten statt, die den Stromverbrauch eines Hauses in Bezug auf eine Geräte-ID widerspiegeln. Findet eine feingranularere Justierung der Zähler statt, sodass sie beispielsweise pro Stockwerk oder Zimmer den Verbrauch ermitteln können, lässt sich hiermit sogar die Verbindung zu einzelnen Personen herstellen.\\
+% Smart Living: Beispiel siehe Smart Home
+\noindent \textbf{Smart Living.}
+Neben dem bereits beleuchteten \textbf{Smart Home} Kontext bietet \textbf{Smart Living} noch weitere Anwendungsbereiche wie beispielsweise \textbf{Social Network} oder die Umsetzung einer \textbf{Smart Community}. Da es sich bei der Smart Community eher um die Umsetzung eines Smart City Konzeptes handelt, werden die existierenden Applikationen des \textbf{Social Network} im Rahmen dieser Betrachtung herangezogen. Grundlegend steht im Kontext von Social Networking der Austausch von persönlichen Informationen auf virtuellen Plattformen, wie zum Beispiel Facebook \cite{Facebook2022} oder Twitter \cite{Twitter2022}, im Vordergrund. Durch die Verwendung dieser Apps soll es dem Nutzer ermöglicht werden persönlicher Inhalte aus dem seinem Privatleben oder Inhalte allgemeinen Interesses mit gleichgesinnten Nutzern in Form von Gruppen oder mit seinen direkten Kontakten zu teilen. Neben dem Verbreiten von Informationen werden diese Kommunikationskanäle auch zur Vernetzung mit Bekannten verwendet, die sich nicht im unmittelbaren Umfeld des Nutzers befinden. Aufnahmekriterium für jeden Nutzer der Plattform ist das Erstellen eines persönlichen Kontos oder Profils, auf dem er die Möglichkeit besitzt seine persönlichen Daten zu speichern und sich so für andere Nutzer identifizierbar zu machen. Abgesehen von den Ausnahmen von pseudonymisierten Profilen stellt der Großteil der Nutzer neben ihrem Namen und Geburtsdaten auch persönliche Interessen wie Hobbies auf ihre Nutzerprofile, die somit basierend auf ihren Privatsphäreeinstellungen, für den Rest der Plattform einsehbar sind. Dementsprechend befinden sich in diesem Teilbereich eine große Menge an personenbezogenen Daten im Umlauf, die von den Betreibern von sozialen Netzwerken erhoben und gespeichert werden.\\
+% Smart Environment: Beispiel für Wettersensoren
+\noindent \textbf{Smart Environment.}
+Die Domäne \textbf{Smart Environment} beschäftigt sich mit dem Zustand der Umwelt, in dem sich die \textbf{Smart City} befindet. Sie hat zum Ziel basierend auf Wetterdaten oder der Qualität der Luft ein vollumfängliches Lagebild der Stadt zu erstellen und durch Überwachungssysteme das Einhalten von Grenzwerten zum Beispiel bei der Kohlenstoffdioxid-Belastung zu garantieren. Weitere Anwendungsgebiete sind beispielsweise auch die Überwachung des Abwassers oder die Detektion von Waldbränden in der umliegenden Region \cite{SecPrivSmartCity2021}. Im Zusammenhang mit der Erfassung von Daten werden hier größtenteils nur technische beziehungsweise physikalische Informationen aus der Umwelt erhoben, die sich in Form von Temperatur oder Luftqualität wiederspiegeln. Eine direkte Verbindung zu einer Person kann hier nicht hergestellt werden. Eine andere Situation könnte sich ergeben, wenn beispielsweise Sensoren an jedem Abwasserkanal eines Hauses installiert und somit deren Abwasserproduktion überwacht werden würde. Dies käme einem Szenario ähnlich dem vorherigen Beispiel bezüglich des Einsatzes von \textbf{Smart Metern} innerhalb eines Haushaltes gleich. Hieraus erstellte Nutzerprofile könnten neben dem Verbrauch von Wasser zusätzlich die Zusammensetzung des Abwassers enthalten und mögliche Rückschlüsse auf die Verwendung bestimmter Produkte des Bewohners zulassen.\\
+% Smart Industry: Beispiel Kameras in den Fertigungshallen
+\noindent \textbf{Smart Industry.}
+Als kleinste Einheit wird im Kontext der \textbf{Smart Industry} die \textbf{Smart Factory} verstanden. Innerhalb dieser Fertigungsstätten arbeiten Menschen und Roboter Hand in Hand an der vollautomatisierten Herstellung eines Produktes. Die Besonderheit dieser Fabriken ist, dass sie aus mehreren sogenannten \ac{cpps} bestehen, die ausgestattet mit Prozessoren, Sensoren und Servomotoren physikalische Prozesse innerhalb der Anlage steuern \cite{Sadeghi2015}. Für die Gewährleistung eines reibungslosen Produktionsablaufes erheben die \ac{cpps} Daten der einzelnen bearbeiteten Produkte und ihrer unmittelbaren Umgebung und tauschen diese im Verbund untereinander aus. Dies ermöglicht es beispielsweise, dass jedes \ac{cpps} zu genau jedem Zeitpunkt Kenntnis davon hat, wo sich das zu bearbeitende Produkt innerhalb der Fabrik genau befindet und welcher Arbeitsschritt gerade durchgeführt wird. Neben den reinen produktspezifischen Daten interagieren die \ac{cpps} auch mit menschlichen Nutzern und sammeln somit durch Aufnahmen mit visuellen oder Sprachsensoren auch Daten der Mitarbeiter, die an den entsprechenden Maschinen tätig sind.\\
+% Smart Services: Erläuterung der BCG Analyse der Parkplatz-Reservierungs-App
+\noindent \textbf{Smart Services.}
+Die Bereitstellung von Diensten aus dem Bereich \textbf{Smart Services} umfasst neben intelligenten Lösungen für die Handhabung des Verkehrs innerhalb einer \textbf{Smart City} wie in \ref{sec:Grundlagen} beschrieben zusätzlich Lösungen bezüglich der öffentlichen Verwaltung, dem Gesundheitswesen und dem Transport \cite{SecPrivSmartCity2021}. Bei genauerer Beachtung der Servicedienstleistungen lässt sich abstrahieren, dass in jedem dieser Kontexte die Interaktion mit einem Bewohner einer \textbf{Smart Citiy} inbegriffen sein muss. Bedeutet, die Handhabung und Verarbeitung personenbezogener Daten ist eine notwendige Bedingung, um die jeweilige Funktion hinreichend anzubieten. Beispielsweise wäre die Verwendung einer Applikation für das Finden eines Parkplatzes nicht unbedingt zielführend, wenn sie keinen Zugriff auf den Standort des Nutzers und seiner umliegenden Umgebung hätte. Wiederum hieraus lässt sich schließen, dass diese Art von Anwendungen nicht nur aus einzelnen Datentöpfen bedient werden können, sondern einen Querschnitt an Informationen über unterschiedliche Bereiche hinweg erfordert. 
+Diese Problematik des Datenaustausches innerhalb von Smart City Applikationen wurde bereits in \cite{BCG2020} schwerpunktmäßig analysiert. Ziel der Auswertung war es, ob Smart City Anwendungen für die Bereitstellung ihrer Dienste, wie zum Beispiel einer Parkplatz-Reservierungs-App, nur Informationen aus einer Quelle beziehen oder einen Längsschnitt durch andere Bereiche ziehen. Bereiche wurden in diesem Kontext als Industriezweige definiert, die somit eine besondere Verantwortung für die von ihnen erhobenen Daten besitzen. Bezüglich der angesprochenen Parkplatz-Reservierungs-App konnte festgestellt werden, dass neben den Belegungsdaten von Garagen, historischen Verkehrsdaten und aktuellen Wetterdaten auch Informationen über baldige öffentliche Veranstaltungen verwendet werden, um in Echtzeit die Parkkosten für bestimmte Bereiche innerhalb der Stadt zu prognostizieren. Dieses Ergebnis lies sich im Rahmen der angestellten Untersuchungen von 75 Applikationen in diesem Umfeld mindestens die Hälfte Daten über mehrere Quellen hinweg aggregiert und für die Dienstbereitstellung verwendet. Darunter waren Anwendungen des öffentlichen Transports und der Verwaltung am Häufigsten vertreten. Veranschaulicht wird dies als Teil des nachfolgenden Diagramms \ref{fig:data-aggregation-smart-city-apps}, das neben den aktuell existierenden Anwendungen zusätzlich noch mögliche zukünftige Projekte umfasst, von denen bereichsübergreifend Daten gesammelt werden.
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.2]{main/pictures/smart_city/Smart_City_Apps_Data_Req}
+    \caption{Übersicht über die Menge an Applikationen, die Daten über mehrere Industriezweige zur Service-Bereitstellung aggregieren \cite{BCG2020}}
+    \label{fig:data-aggregation-smart-city-apps}
+\end{figure}
+
+\noindent Im Hinblick auf die erhobenen Daten können bei der beispielhaft betrachteten Applikation durchaus personenbezogene Daten identifiziert werden. Daraus resultiert, dass der vorgefundene Datenaustausch über mehrere Grenzen smarter Umgebungen hinweg, nicht ohne Nutzung von Regularien zur Handhabung dieser Daten rechtmäßig stattfinden darf. Beispiele für derzeitige Verwendung dieser Daten und in welcher Form sie dennoch für diese Art von Applikationen nutzbar gemacht werden kann, wird in der nachfolgenden Untersektion \fullref{sec:Hauptteil:ssec:Regulationsmöglichkeiten} nochmals genauer beleuchtet.
+
+%------------------------------------------------------------------------------------------------
+\subsection{Bewertung der Datenschutz-Konformität}
+\label{sec:Analyse der Datenerhebungt:ssec:Datenschutz-Konformität}
+%------------------------------------------------------------------------------------------------
+Basierend auf der umfassenden Betrachtung von beispielhaften Applikationen aus dem Bereich \textbf{Smart Home} und der übergeordneten Domäne \textbf{Smart City} werden anschließend bezüglich der identifizierten Daten nun die Datenschutz-Konformität kontextübergreifend bewertet. Im Rahmen dieser Bewertung werden jedoch keine genaueren Betrachtungen hinsichtlich der Anwendungen und Systeme selbst angestellt, sondern nur auf dessen aktuellen Zustand hin die Beachtung der derzeit geltenden Rechtssprechung der \ac{dsgvo} dessen Einhaltung festgestellt. Beginnend mit den Anwendungen und Geräten des \textbf{Smart Home}, die im Rahmen der beiden Arbeiten \cite{Mandalari2021,Ren2019} auf deren Verhalten und die Preisgabe von Daten untersucht wurden. Hierbei konnte festgestellt werden, dass einzelne Geräte (zu diesem Zeitpunkt) nur ansatzweise konformes Verhalten zeigten. In Anbetracht der beiden Grundprinzipien der \ac{dsgvo} hinsichtlich \textbf{Datenminimierung} und \textbf{Zweckbindung} wurden während der Nutzungsphasen und Ruhephasen der Geräte dennoch Daten erhoben, die beispielsweise bei der analysierten intelligenten Türklingel Bildmaterial mit zugehörigem Zeitstempel enthielt, ohne dass der Nutzer Einfluss auf den Prozess der Datenerhebung hat beziehungsweise diese Aktion ausgelöst hat. Zwar bestünde hier die Möglichkeit, dass zur besseren Dienstbereitstellung zusätzliche Daten erhoben werden, um den Service von Seiten des Geräteherstellers zu optimieren \cite{Bastos2019}. Jedoch würde dies trotzdem der Einwilligung des Nutzers bedürfen, die in dem obigen Beispiel nicht eingefordert wurde. Ferner ist zum Beispiel auch das Senden der Daten an Endpunkte außerhalb des geltenden Rechtsbereiches ein signifikanter Punkt. Im Rahmen der \ac{dsgvo} wird hierbei von der Verarbeitung oder Speicherung in sogenannten "Drittländern" \cite{dsgvo2016} gesprochen, die wiederum in sichere und unsichere Länder unterteilt werden können. Auch Datenübermittelungen in die USA sind aufgrund der für ungültig erklärten Privacy Shield Reglung nicht mehr ohne zusätzliche Garantien zulässig. Bedeutet, dass auf Basis der aktuellen Lage für viele Geräte ein deutliches Optimierungspotential besteht, um die Einhaltung der derzeit geltenden Rechtssprechung zu gewährleisten.
+% TODO: Smart City Bewertung
 
 %------------------------------------------------------------------------------------------------
 \subsection{Regulationsmöglichkeiten}
@@ -126,6 +139,15 @@ Jedoch die Datenerhebung jeder einzelnen Applikation oder Systems innerhalb dies
 %%------------------------------------------------------------------------------------------------
 
 \noindent \textbf{TODO: IoTInspector oder Smart Walk in Hamburg} % Application Layer
+
+% Beispiel: Louisville, Kentucky, verwendet aggregierte Daten smarter Asthma Inhalatoren zur 
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.2]{main/pictures/smart_city/Open_Data_Platform}
+    \caption{TODO: \cite{BCG2020}}
+    \label{fig:}
+\end{figure}
 
 %------------------------------------------------------------------------------------------------
 \subsection{Beantwortung der \ac{rq}}
