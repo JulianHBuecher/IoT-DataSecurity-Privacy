@@ -15,7 +15,8 @@ Gemäß der einleitenden Motivation aus Sektion \ref{sec:Einleitung} wird nun mi
 %\label{sec:Grundlagen:ssec:Geräte des Internet of Things}
 %%------------------------------------------------------------------------------------------------
 
-\noindent \textbf{Geräte des \acl{iot}.}
+\paragraph{Geräte des \acl{iot}.}
+\label{sec:Grundlagen:para:Geräte des Internet of Things}
 Im Rahmen der aktuellen Definitionen von Geräten des \ac{iot}, oder auch Smart Devices genannt, werden diese, als Klasse von Geräten beschrieben, die auf Basis von Sensoren Informationen aus ihrer Umwelt aufnehmen und auf Basis dieser Daten gezielt Instruktionen durchführen. Hierbei reicht die Bandbreite von Gadgets des alltäglichen Gebrauchs, u.a. Mobiltelefone oder Smart Watches, bis hin zu autonomen Robotern aus der Industrie 4.0, die über Kameras und hochempfindlichen Messgeräten mit ihrer Umwelt in Wechselwirkung treten \cite{Li2015}. Dies geschieht hierbei ohne jegliches Zutun eines Menschen über das Internet oder ein internes Netzwerk. Architektonisch lässt sich das \ac{iot} in drei Schichten unterteilen. Diese können basierend auf der Definition von \cite{Seliem2018} folgendermaßen darstellen:
 
 \begin{itemize}
@@ -36,7 +37,7 @@ Im Rahmen der aktuellen Definitionen von Geräten des \ac{iot}, oder auch Smart 
 \subsection{Rechtliche Rahmenbedingungen}
 \label{sec:Grundlagen:ssec:Rechtliche Rahmenbedingungen}
 %------------------------------------------------------------------------------------------------
-%\noindent \textbf{Rechtliche Rahmenbedingungen.}
+
 Zur grundlegenden Bewertung und Einordnung der erhobenen Datenklassen besteht die Möglichkeit je nach Rechtssystem unterschiedliche Regularien anzuwenden. Die beiden wichtigsten Vertreter ihrer Art sind einerseits die \acl{gdpr} beziehungsweise \acl{dsgvo} innerhalb des europäischen Rechtssystems und die \acl{ftc} als staatliche Institution, die die Interessen der US-Bürger in unterschiedlichen Ressorts bedient. Für beide Vertreter gilt, dass sie den Umgang mit \ac{pii}, \ac{nonpii} und personenbezogenen Daten beschreiben und somit sicherstellen, dass bestimmte Standards an Sicherheit und Privatsphäre umgesetzt werden. Die genaue Abgrenzung hinsichtlich der Unterschiede zwischen den beiden gewählten Vertretern wird nachfolgend nochmals genauer erläutert.
 
 %%------------------------------------------------------------------------------------------------
@@ -44,7 +45,8 @@ Zur grundlegenden Bewertung und Einordnung der erhobenen Datenklassen besteht di
 %\label{sec:Grundlagen:ssec:Rechtliche Rahmenbedingungen:sssec:GDPR}
 %%------------------------------------------------------------------------------------------------
 
-\noindent \textbf{\acl{gdpr}.}
+\paragraph{\acl{gdpr}.}
+\label{sec:Grundlagen:para:GDPR}
 Durch Inkrafttreten der \\ \ac{gdpr} / \ac{dsgvo} am 25.05.2018 wurde von der \acl{eu} ein einheitlicher Katalog an Regeln geschaffen, der den allgemeinen Umgang bezüglich der Erhebung und der Verarbeitung von Daten im europäischen Raum beschreibt. Ziel sind hierbei (globale) Unternehmen und Einrichtungen, die innerhalb der \acl{eu} als Teil ihrer Dienstleistungen Daten von \ac{eu}-Bürgern erheben und diese verarbeiten. Als Nachfolger der \textbf{\textit{Data Protection Directive 95/46/EC}} löste sie diese mit der erstmaligen Einführung der \ac{gdpr} 2016/679 am 24.05.2016 ab. Zweck dieses Rahmenwerkes war die Harmonisierung der Datenschutz- und Privatsphäre-Regelungen innerhalb der europäischen Union \cite{Bastos2019}.
 
 \noindent Neben der Definition von zentralen Begrifflichkeiten und Eckpunkten stehen die Formulierung von Prinzipien im Mittelpunkt des Gesetzestextes. Zur Einordnung dieser, wird beginnend mit der nachfolgenden Auflistung ein Überblick über die beteiligten rechtlichen Entitäten auf Basis von \cite{DSGVOArt4} gegeben.
@@ -67,7 +69,8 @@ Durch Inkrafttreten der \\ \ac{gdpr} / \ac{dsgvo} am 25.05.2018 wurde von der \a
     \item \textbf{Accountability} / \textbf{Rechenschaftspflicht} \\ Der \textbf{\ac{dc}} ist für die Einhaltung der obigen \textbf{sechs} Prinzipien verantwortlich und muss dies nachweisen können.
 \end{itemize}
 
-\noindent \textbf{ETSI EN 303 645.}
+\paragraph{ETSI EN 303 645.}
+\label{sec:Grundlagen:para:ETSI EN 303 645}
 Die im Rahmen der \ac{dsgvo} definierten Richtlinien für den Datenschutz der europäischen Bürger und Institutionen sind jedoch nicht anwendbar auf die Entwicklung von sicheren \ac{iot}-Systemen. Aus diesem Grund wurde von der europäischen Normungsorganisation \acl{etsi} der ETSI EN 303 645, ein europäischer Standard, definiert, der die Basisanforderungen an die IT-Sicherheit von vernetzten Geräten für Verbraucherinnen und Verbraucher, beispielsweise im Smart Home, beschreibt. Hiermit werden Empfehlungen für die sichere Entwicklung (\acl{sbd}) von \ac{iot}-Geräten und deren Anwendungen erhoben \cite{BSI2020}. In Kombination mit der im August 2021 veröffentlichten Prüfspezifikation ETSI TS 103 701 erlaubt dieser Standard die Prüfung von Geräten des Smart Home Bereichs und die Erteilung von IT-Sicherheitskennzeichen an die verschiedenen Produktkategorien \cite{BSI2022}.
 
 %%------------------------------------------------------------------------------------------------
@@ -75,7 +78,8 @@ Die im Rahmen der \ac{dsgvo} definierten Richtlinien für den Datenschutz der eu
 %\label{sec:Grundlagen:ssec:Rechtliche Rahmenbedingungen:sssec:FTC}
 %%------------------------------------------------------------------------------------------------
 
-\noindent \textbf{\acl{ftc}.}
+\paragraph{\acl{ftc}.}
+\label{sec:Grundlagen:para:Federal Trade Commission}
 Die \acl{ftc}, auch Bundeshandelskommission genannt, stellt eine politische Institution im amerikanischen Raum dar, der die Regulation der Datensicherheit und Privatsphäre obliegt. Neben dem Ressorts des Datenschutzes deckt sie auch allgemein den Verbraucherschutz der amerikanischen Bürger ab. Hierunter fällt unter anderem auch die Kontrolle von unlauterem Wettbewerb oder rechtswidrigen Geschäftsmethodiken. Weitere Beispiele des Service-Portfolios sind die Beratung von Endkunden bezüglich Einkauf, Krediten und Identitätsdiebstahl bis hin zu Thematiken des wirtschaftlichen Kontexts. Somit beschreibt die \ac{ftc} nicht nur die Regeln, sondern kann diese auch effektiv umsetzen \cite{FTC}. Als gleichwertiges Organ kann hier die \textbf{\textit{Abteilung für Recht der Europäischen Kommission}} gesehen werden \cite{FTCEU}. Bezüglich des Datenschutzes gilt es jedoch zu beachten, dass innerhalb des amerikanischen Rechtssystems kein zentrales Organ über alle Bundesstaaten hinweg definiert ist, das die Einhaltung dieser Regeln kontrolliert. Allgemein gilt, dass jedes amerikanische Unternehmen ihre Ansprüche an den Datenschutz und die Privatsphäre selbst definiert und deren Einhaltung entsprechend umsetzt. Kommt es diesen selbsterlegten Anforderungen nicht nach, ist vorerst mit keinen Disziplinarmaßnahmen von Seiten des Staates zu rechnen, sondern wird im Wettbewerb nur als nicht vertrauenswürdiger Geschäftspartner behandelt \cite{DatenschutzOrg2022}.
 
 %------------------------------------------------------------------------------------------------
@@ -90,7 +94,8 @@ Im Kontext der nun eingeführten Grundlagen für die Rechtssprechung bezüglich 
 %\label{sec:Grundlagen:ssec:Klassifikation von Daten:sssec:PII}
 %%------------------------------------------------------------------------------------------------
 
-\noindent \textbf{\acf{pii}.}
+\paragraph{\acf{pii}.}
+\label{sec:Grundlagen:para:Personal Identifiable Information}
 Der Begriff der \ac{pii} stammt ursprünglich aus dem amerikanischen Raum und wird innerhalb unterschiedlichster Institutionen der USA verwendet. Jedoch gilt es hier zu beachten, dass trotz desselben Rechtssystems keine einheitliche Definition existiert und somit die gewählten Beschreibungen nicht rechtlich fundiert sind. Basierend auf der Handreichung der \ac{nist}, die extreme Ähnlichkeiten bezüglich der Definition von \ac{ftc} aufweist, handelt es sich bei \acs{pii} um Informationen, die es ermöglichen Rückschlüsse auf die Person zu ziehen, von der die Daten stammen \cite{PiwikPro2022,NIST2010}. Des Weiteren findet eine weitere Unterteilung in sogenannte \textbf{verknüpfbare Informationen} und \textbf{verknüpfte Informationen} statt. Nachfolgend werden je Kategorie Beispiele aufgeführt:
 
 \begin{itemize}
@@ -117,7 +122,8 @@ Der Begriff der \ac{pii} stammt ursprünglich aus dem amerikanischen Raum und wi
 %\label{sec:Grundlagen:ssec:Klassifikation von Daten:sssec:Non-PII}
 %%------------------------------------------------------------------------------------------------
 
-\noindent \textbf{\acf{nonpii}.}
+\paragraph{\acf{nonpii}.}
+\label{sec:Grundlagen:para:Non Personal Identifiable Information}
 Im Kontrast zu den \ac{pii} stellen die \ac{nonpii} eine Klasse an Daten dar, deren alleinstehende Verwendung kein Tracking oder eine Identifikation eines Individuums erlaubt. Beispielsweise gehören für manche AdTech-Unternehmen die Informationen wie zum Beispiel Geräte-ID oder Cookies, im Gegensatz zu den bereits definierten \textbf{verknüpften Daten}, aus \ac{pii} zu den \ac{nonpii}. Diese Abweichungen sind aufgrund der beschriebenen Problematik hinsichtlich der fehlenden rechtlichen Fundamente im amerikanischen Gesetzeskontext durchaus üblich und müssen somit für jeden Einzelfall geprüft werden. Zur Kategorie von \ac{nonpii} gehören nach \cite{PiwikPro2022} unter anderem:
 
 \begin{itemize}
@@ -130,7 +136,8 @@ Im Kontrast zu den \ac{pii} stellen die \ac{nonpii} eine Klasse an Daten dar, de
 %\label{sec:Grundlagen:ssec:Klassifikation von Daten:sssec:Personenbezogene Daten}
 %%------------------------------------------------------------------------------------------------
 
-\noindent \textbf{Personenbezogene Daten.}
+\paragraph{Personenbezogene Daten.}
+\label{sec:Grundlagen:para:Personenbezogene Daten}
 Personenbezogene Daten "[beschreiben] alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person [...] beziehen" \cite{DSGVOArt4}. Somit gehören zum Beispiel auch Cookies, Geräte-IDs und IP-Adressen zu den schützenswerten Informationen, womit sich die \ac{dsgvo} deutlich von ihrem amerikanischen Äquivalent unterscheidet. Beispiele für personenbezogene Daten sind nach \cite{PiwikPro2022} oder \cite{DSGVOPerDa}:
 
 \begin{itemize}
@@ -150,7 +157,8 @@ Personenbezogene Daten "[beschreiben] alle Informationen, die sich auf eine iden
 %\label{sec:Grundlagen:ssec:Klassifikation von Daten:sssec:Anonymisierte Daten}
 %%------------------------------------------------------------------------------------------------
 
-\noindent \textbf{Anonymisierte Daten.}
+\paragraph{Anonymisierte Daten.}
+\label{sec:Grundlagen:para:Anonymisierte Daten}
 Bei anonymisierten Daten handelt es sich um \textbf{nicht personenbezogene Daten}. Unter Verwendung dieser Art von Informationen kann keinerlei Person identifiziert oder mit den Daten in Bezug gebracht werden. Aus diesem Grund wird die Handhabung von anonymen Daten von der \ac{dsgvo} auch nicht weiter reguliert. Dies ist zum Beispiel mittels des Erwägungsgrundes 26 \cite{DSGVOEg26} innerhalb der \ac{dsgvo} geregelt. Beispiele für anonymisierte Daten sind somit den Referenzen aus \ac{nonpii} gleichzusetzen.
 
 %%------------------------------------------------------------------------------------------------
@@ -158,7 +166,8 @@ Bei anonymisierten Daten handelt es sich um \textbf{nicht personenbezogene Daten
 %\label{sec:Grundlagen:ssec:Klassifikation von Daten:sssec:Pseudonymisierte Daten}
 %%------------------------------------------------------------------------------------------------
 
-\noindent \textbf{Pseudonymisierte Daten.}
+\paragraph{Pseudonymisierte Daten.}
+\label{sec:Grundlagen:para:Pseudonymisierte Daten}
 Mittels der Pseudonymisierung von Daten ist es für den Betrachter dieser Daten nicht mehr möglich, ohne die Verwendung von zusätzlichen Informationen einen Bezug zu einem spezifischen Individuum herzustellen \cite{DSGVOArt4}. Somit wird es möglich auch höchst sensible Daten durch eine Pseudonymisierung für die Verwendung in einem anderen Kontext freizugeben. Eine mögliche Anwendung ist zum Beispiel das gezielte Ersetzen von Informationsbestandteilen (personenbezogene Daten) durch berechnete Einträge oder Codes, die später eine erneute Substitution ermöglichen.
 
 %------------------------------------------------------------------------------------------------
@@ -173,7 +182,8 @@ Anhand der vorgestellten Datenkategorien in \ref{sec:Grundlagen:ssec:Klassifikat
 %\label{sec:Grundlagen:ssec:Gefahren für die Privatsphäre:sssec:(User) Identification}
 %%------------------------------------------------------------------------------------------------
 
-\noindent \textbf{(User) Identification.}
+\paragraph{(User) Identification.}
+\label{sec:Grundlagen:para:User Identification}
 Die (User) Identification beschreibt die Möglichkeit zur Charakterisierung einer Person (oder einer Entität) anhand von personenbezogenen Daten (z.B. Name, Adresse oder Standort) und einer anschließenden Veröffentlichung deren Identität. Daraus resultierende Gefahren sind neben der Verletzung der Privatsphäre des Individuums zusätzlich das Ermöglichen weiterer Eingriffe in Form der nachfolgenden Gefahren für den Nutzer. Dies könnte zum Beispiel das gezielte Sammeln von Informationen sein, die wiederum mit dem Nutzer in Verbindung gebracht werden können und somit eine gezieltes Profiling des Nutzers möglich macht \cite{Seliem2018}.
 
 %%------------------------------------------------------------------------------------------------
@@ -181,7 +191,8 @@ Die (User) Identification beschreibt die Möglichkeit zur Charakterisierung eine
 %\label{sec:Grundlagen:ssec:Gefahren für die Privatsphäre:sssec:(User) Tracking}
 %%------------------------------------------------------------------------------------------------
 
-\noindent \textbf{(User) Tracking.}
+\paragraph{(User) Tracking.}
+\label{sec:Grundlagen:para:User Tracking}
 Aufbauend auf dem vorherigen Eingriff in die Privatsphäre und den Datenschutz des Nutzers, besteht die Gefahr eines (User) Trackings. Hierbei werden die gesammelten Daten über einen bestimmten Nutzer, meist in Form von Standortdaten, dazu verwendet dessen Aufenthaltsorte zu lokalisieren. Hiermit ergeben sich für die unterschiedlichen Dienstbetreiber die Möglichkeit unter Verwendung von beispielsweise Machine Learning Algorithmen das Verhalten bestimmter Ziele zu erlernen und ihm somit auf Basis seines Standorts entsprechende Angebote zu unterbreiten \cite{Seliem2018}.
 
 %%------------------------------------------------------------------------------------------------
@@ -189,7 +200,8 @@ Aufbauend auf dem vorherigen Eingriff in die Privatsphäre und den Datenschutz d
 %\label{sec:Grundlagen:ssec:Gefahren für die Privatsphäre:sssec:Monitoring}
 %%------------------------------------------------------------------------------------------------
 
-\noindent \textbf{Monitoring.}
+\paragraph{Monitoring.}
+\label{sec:Grundlagen:para:Monitoring}
 Diese Gefahr bezieht sich direkt auf das Erheben von Nutzungsdaten eines Gerätes im Kontext der Rekonstruktion der Interaktion des Nutzers mit dem Gerät. Basierend auf diesen Informationen lassen sich Muster aus dem Alltag des Nutzers identifizieren, die wiederum in anderer Art und Weise wiederverwendet werden können \cite{Seliem2018}.
 
 %%------------------------------------------------------------------------------------------------
@@ -197,7 +209,8 @@ Diese Gefahr bezieht sich direkt auf das Erheben von Nutzungsdaten eines Geräte
 %\label{sec:Grundlagen:ssec:Gefahren für die Privatsphäre:sssec:Profiling}
 %%------------------------------------------------------------------------------------------------
 
-\noindent \textbf{Profiling.}
+\paragraph{Profiling.}
+\label{sec:Grundlagen:para:Profiling}
 Die Methodik des Profilings erstellt auf Basis aggregierter Daten ein Profil eines Nutzers, welches wiederum dazu verwendet werden kann ein genaues Bild davon zu erstellen, welche Interessen und Bedürfnisse der Nutzer hat. Somit lässt sich zum Beispiel der Besucher eines Online-Shops besser bewerben, wenn der E-Commerce Betreiber durch Verwenden von Daten aus dem Verlauf des Nutzers auf dessen Wünsche reagieren kann. Neben der Verwendung für Werbezwecke lassen sich mittels Profiling auch Rückschlüsse auf die politische, wie auch religiösen Ansichten eines Individuums ziehen \cite{Seliem2018}.
 
 %%------------------------------------------------------------------------------------------------
@@ -205,7 +218,8 @@ Die Methodik des Profilings erstellt auf Basis aggregierter Daten ein Profil ein
 %\label{sec:Grundlagen:ssec:Gefahren für die Privatsphäre:sssec:Device Hijacking}
 %%------------------------------------------------------------------------------------------------
 
-\noindent \textbf{Device Hijacking.}
+\paragraph{Device Hijacking.}
+\label{sec:Grundlagen:para:Device Hijacking}
 Die Übernahme von öffentlich über das Internet zugänglichen Geräten stellt im Rahmen von \ac{iot} ein allgegenwärtiges Problem dar. Angreifer besitzen durch mangelnde Vorgaben an Sicherheitsstandards und Update-Zyklen für bereits platzierte Geräte in vielen Fällen die Möglichkeit diese über frei zugängliche Schnittstellen zu attackieren. \cite{SecPrivSmartCity2021}. Über die Plattform Shodan.io \cite{Shodan2022} lassen sich beispielsweise Geräte, die mit dem Internet verbunden sind, aufspüren und über die angegebenen IP-Adressen direkt ansprechen. Durch Zugriffe auf Geräte im Smart Home oder auch in anderen Smart Environments hat der Angreifer nun die Möglichkeit gezielt Daten zu sammeln und damit andere Gefahren für den Nutzer zu generieren.
 
 %%------------------------------------------------------------------------------------------------
@@ -213,7 +227,8 @@ Die Übernahme von öffentlich über das Internet zugänglichen Geräten stellt 
 %\label{sec:Grundlagen:ssec:Gefahren für die Privatsphäre:sssec:Identity Theft}
 %%------------------------------------------------------------------------------------------------
 
-\noindent \textbf{Identity Theft.}
+\paragraph{Identity Theft.}
+\label{sec:Grundlagen:para:Identity Theft}
 Im Rahmen eines Identitätsdiebstahls wird es einem Angreifer möglich, die von ihm gesammelten Daten zu nutzen, um sich als das betroffene Individuum auszugeben. Hiermit lassen sich beispielsweise, basierend auf den erhobenen Informationen, Bank-Transaktionen oder Vorgänge durchführen, von denen der Nutzer keine Kenntnis hat \cite{SecPrivSmartCity2021}.
 
 %------------------------------------------------------------------------------------------------
@@ -224,9 +239,9 @@ Im Rahmen eines Identitätsdiebstahls wird es einem Angreifer möglich, die von 
 Durch den Einsatz von Geräten des \ac{iot}, wie sie zu Beginn dieser Sektion beschrieben sind, werden Umgebungen des alltäglichen Lebens zu sogenannten \textbf{smarten} Umgebungen oder auch Kontexten. Basierend auf den Fähigkeiten der verwendeten Geräte stellen diese Umgebungen unterschiedliche Funktionen den dort allokierten Individuen zur Verfügung. Beispielsweise können Konstrukte wie eine \textbf{Smart City} mehrere Kontexte enthalten, aus denen sie sich zusammensetzt. Dies ist nachfolgend in der Abbildung \ref{fig:smart-applications} exemplarisch dargestellt. Es gilt hierbei zu beachten, dass im Kontext von \ac{iot} die Begriffe \textit{intelligent} und \textit{smart} synonym zu verwenden sind und somit jeweils dasselbe bedeuten.
 
 \begin{figure}
-\includegraphics[width=\textwidth]{fundamentals/pictures/Smart_Applications}
-\caption{Darstellung der Teilsegmente einer Smart City zerlegt in ihre einzelnen Bestandteile \cite{Zhang2017}.}
-\label{fig:smart-applications}
+    \includegraphics[width=\textwidth]{fundamentals/pictures/Smart_Applications}
+    \caption{Darstellung der Teilsegmente einer Smart City zerlegt in ihre einzelnen Bestandteile \cite{Zhang2017}.}
+    \label{fig:smart-applications}
 \end{figure}
 
 \noindent In den nächsten beiden Unterkapiteln werden basierend auf der Verwendung in der späteren Analyse die beiden Bereiche \textbf{Smart Home} und \textbf{Smart City} genauer definiert und eingeordnet.
@@ -236,7 +251,8 @@ Durch den Einsatz von Geräten des \ac{iot}, wie sie zu Beginn dieser Sektion be
 %\label{sec:Grundlagen:ssec:Smarte Kontexte:sssec:Smart Home}
 %%------------------------------------------------------------------------------------------------
 
-\noindent \textbf{Smart Home.}
+\paragraph{Smart Home.}
+\label{sec:Grundlagen:para:Smart Home}
 Das \textbf{Smart Home} beschreibt als konkrete Einheit die Integration von \ac{iot} in die Behausungen eines Individuums. Durch die Verwendung von sogenannten \acl{wsn} haben die einzelnen Smart Devices innerhalb des Netzwerkes die Fähigkeit miteinander kommunizieren und Daten über ihren aktuellen Zustand auszutauschen \cite{Biljana2017}. Die hierbei eingesetzten Typen von Apparturen können beispielsweise dem kontextuellen Rahmen von \textbf{Sicherheit}, \textbf{Energie-Effizient \& Komfort} und \textbf{Gesundheit \& Wohlbefinden} zugeordnet werden. Fokus der Integration von \ac{iot} in den Wohnraum besteht in allgemeiner Verbesserung der Lebensqualität und Steigerung des Wohlbefinden \cite{Bastos2018}. Nachfolgend eine Auflistung von möglichen Gerätetypen innerhalb oben genannten Bereiche.
 
 \begin{itemize}
@@ -263,7 +279,8 @@ Das \textbf{Smart Home} beschreibt als konkrete Einheit die Integration von \ac{
 %\label{sec:Grundlagen:ssec:Smarte Kontexte:sssec:Smart City}
 %%------------------------------------------------------------------------------------------------
 
-\noindent \textbf{Smart City.}
+\paragraph{Smart City.}
+\label{sec:Grundlagen:para:Smart City}
 Als übergeordneter Kontext beschreibt die \textbf{Smart City} den Zusammenschluss mehrerer individueller \textbf{smarter Umgebungen}, auch \textbf{Smart Environments} genannt, die innerhalb dieses Konstruktes zusammengefasst werden können. Wie aus Abbildung \ref{fig:smart-applications} ersichtlich kann das bereits in \ref{sec:Grundlagen:sssec:Smart Home} beschriebene \textbf{Smart Home} als Bestandteil einer \textbf{Smart City} verstanden und somit auch als potentielle Datenquelle für die Nutzung durch diese übergeordnete Kontrollinstanz verwendet werden. Die hierdurch ermöglichten Synergien fördern Entwicklungspotentiale unter anderem in den Bereichen \textbf{öffentliche Dienste}, \textbf{Verkehrsmanagement}, \textbf{Energieverbrauch}, \textbf{Luftqualität \& Lärmbelastung} und die \textbf{Reduzierung von operationellen Kosten} \cite{Bastos2018}.
 Im Rahmen der verwendeten Literatur, beispielsweise \cite{Bastos2018,Cui2018,SecPrivSmartCity2021}, lässt sich in die nachfolgenden kleineren Einheiten unterscheiden. Da sich die Definitionen dieser Konstrukte auf Basis der betrachteten Aspekte unterscheiden kann, erhebt diese Liste keinen Anspruch auf Vollständigkeit und gibt nur einen groben Überblick über die aktuelle Situation.
 
