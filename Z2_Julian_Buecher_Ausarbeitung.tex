@@ -39,12 +39,15 @@ sorting=ynt % sorting options: https://de.overleaf.com/learn/latex/Articles/Gett
 \usepackage[nohyperlinks, printonlyused, nolist]{acronym}
 \usepackage{nameref}
 \usepackage{hyperref}
+\usepackage{float}
 
 %----------------------------------------------------------------------------------------
 % Additional Commands
 \newcommand*{\fullref}[1]{\hyperref[{#1}]{\ref*{#1} \nameref*{#1}}} % One single link
 
 %----------------------------------------------------------------------------------------
+
+\setcounter{secnumdepth}{3}
 
 \begin{document}
 
@@ -74,7 +77,11 @@ sorting=ynt % sorting options: https://de.overleaf.com/learn/latex/Articles/Gett
 %----------------------------------------------------------------------------------------
 
 \begin{abstract}
-Die Nutzung von Geräten des \ac{iot} besteht hauptsächlich darin, Informationen ihrer Umgebung zu sammeln, um diese übergeordneten Applikationen für die Bereitstellung von Diensten im Rahmen von Handlungsempfehlungen zur Verfügung zu stellen. Hierbei kann es sich einerseits um rein technische Daten, wie zum Beispiel Metriken von Sensoren hochmoderner Fertigungsstraßen, oder auch um personenbezogene Informationen aus der Interaktion von menschlichen Nutzern mit den Geräten innerhalb des privaten oder geschäftlichen Kontextes handeln. Auf Basis der aktuellen Rechtssprechung resultieren hieraus besonders schwerwiegende Eingriffe in die Privatsphäre der Nutzer, die bezüglich der Erhebung von persönlichen Informationen, zu jeder Zeit die Möglichkeit besitzen sollten, den Umfang und die Art der Daten zu kontrollieren, die über sie gesammelt werden. Ziel dieser Arbeit ist es, basierend auf den derzeit geltenden gesetzlichen Regelungen innerhalb des europäischen Raum zu evaluieren, in welchem Rahmen persönliche Informationen von IoT-Geräten (unkontrolliert) gesammelt werden. Speziell werden aufgrund der höheren Interaktion von Gerät und Nutzer im Bereich von Smart Home und Smart City, ausschließlich Szenarien in diesem Zusammenhang beleuchtet.
+Die Nutzung von Geräten des \ac{iot}, im Speziellen der Geräteklasse der Sensoren, ermöglicht es, Informationen aus deren Umgebung zu sammeln, die wiederum übergeordneten Applikationen für die Bereitstellung von Diensten im Rahmen von Handlungsempfehlungen zur Verfügung gestellt werden können.
+Hierbei kann es sich einerseits um rein technische Daten, wie zum Beispiel Metriken hochmoderner Fertigungsstraßen, oder auch um personenbezogene Informationen aus der Interaktion von menschlichen Nutzern mit den Geräten innerhalb des privaten oder geschäftlichen Kontextes handeln. 
+Auf Basis der aktuellen Rechtssprechung resultieren hieraus besonders schwerwiegende Eingriffe in die Privatsphäre der Nutzer, die bezüglich der Erhebung von persönlichen Informationen, zu jeder Zeit die Möglichkeit besitzen sollten, den Umfang und die Art der Daten zu kontrollieren, die über sie gesammelt werden.
+Ziel dieser Arbeit ist es, basierend auf den derzeit geltenden gesetzlichen Regelungen innerhalb des europäischen Raumes zu evaluieren, in welchem Rahmen persönliche Informationen von IoT-Geräten (unkontrolliert) gesammelt werden.
+Speziell werden aufgrund der höheren Interaktion von Gerät und Nutzer im Bereich von Smart Home und Smart City, ausschließlich Szenarien in diesem Zusammenhang beleuchtet.
 
 \keywords{Internet of Things  \and Datenschutz \and Privatsphäre \and GDPR \and Smart Home \and Smart City.}
 \end{abstract}
@@ -83,7 +90,7 @@ Die Nutzung von Geräten des \ac{iot} besteht hauptsächlich darin, Informatione
 %	DOCUMENT BODY
 %----------------------------------------------------------------------------------------
 
-%\newpage z
+%\newpage
 
 \import{shortages/}{shortages.tex}
 
@@ -92,6 +99,8 @@ Die Nutzung von Geräten des \ac{iot} besteht hauptsächlich darin, Informatione
 \import{sections/introduction/}{introduction.tex}
 \import{sections/fundamentals/}{fundamentals.tex}
 \import{sections/main/}{body.tex}
+\import{sections/main/countermeasures/}{countermeasures.tex}
+\import{sections/main/discussion/}{discussion.tex}
 \import{sections/ending/}{ending.tex}
 
 %----------------------------------------------------------------------------------------
