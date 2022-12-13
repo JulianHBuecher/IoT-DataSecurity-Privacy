@@ -31,7 +31,7 @@ Auch im Rahmen von Quantum Computing sind bereits Konzepte für den Einsatz inne
 
 Beginnend mit dem ersten Werkzeug, welches aus der Arbeit \cite{Mandalari2021} zur Identifikation von nicht für die Dienstbereitstellung benötigten Datenverkehrs eingesetzt werden konnte. Bei genauerer Betrachtung handelt es sich bei IoTrimmer und IoTrigger \cite{IoTrim2021} um zwei Skripte, die platziert auf einem Router, der die Schnittstelle für die jeweiligen Geräte darstellt, den generierten Datenverkehr analysieren. 
 Maßgeblich für die Nutzung ist somit ein abgeschlossenes Netzwerk, dass die zu regulierenden Geräte enthält. Dies bedeutet im Umkehrschluss, dass es sich hierbei um ein Tool für die Verwendung im \textbf{Smart Home} Umfeld handelt und bezüglich des Ansatzpunktes für die Regulation innerhalb des \textbf{Perception Layer} einzuordnen ist.
-Die Interaktion der beiden Komponenten lässt sich anhand der nachfolgenden Abbildung \ref{ffig:iotrigger-iotrimmer} anschaulich erklären.
+Die Interaktion der beiden Komponenten lässt sich anhand der nachfolgenden Abbildung \ref{fig:iotrigger-iotrimmer} anschaulich erklären.
 
 \begin{figure}
     \centering
@@ -40,7 +40,7 @@ Die Interaktion der beiden Komponenten lässt sich anhand der nachfolgenden Abbi
     \label{fig:iotrigger-iotrimmer}
 \end{figure}
 
-\noindentIm Voraus wird durch den IoTrigger eine Reihe an automatisierten Tests an den zu kontrollierenden Geräten durchgeführt. Hierbei handelt es sich um das Auslösen von gerätespezifische Funktionen, die im Rahmen von \cite[p. 13-14]{Mandalari2021} erstellt wurden und somit nicht universell nutzbar sind. 
+\noindent Im Voraus wird durch den IoTrigger eine Reihe an automatisierten Tests an den zu kontrollierenden Geräten durchgeführt. Hierbei handelt es sich um das Auslösen von gerätespezifische Funktionen, die im Rahmen von \cite[p. 13-14]{Mandalari2021} erstellt wurden und somit nicht universell nutzbar sind. 
 Resultierend aus den vorgefertigten Geräte-Tests werden anschließend Listen mit allen angesprochenen Destinationen generiert, die im Zusammenhang einer Interaktion des Nutzers mit dem Gerät entstehen. Daraufhin werden die einzelnen Destinationen iterativ durch den IoTrigger blockiert und die Funktionsfähigkeit des Geräts überprüft. 
 Ist das Gerät trotz geblockter Ressource noch voll funktionsfähig, handelt es sich um einen nicht benötigten Endpunkt, der daraufhin weiterhin blockiert bleibt. Andernfalls wird das Ziel als notwendig markiert und für die Verwendung durch das Gerät freigegeben. 
 Die abschließend annotierte Liste mit allen notwendigen und nicht notwendigen Endpunkten wird an den IoTrimmer geleitet, der auf Basis der erstellten Auflistung entsprechende Firewall-Regeln erstellt. Dieses Konzept kommt dem Konstrukt von Block- und Allow-Listen gleich, die innerhalb vieler Router umgesetzt sind \cite{FritzBox2022}.
