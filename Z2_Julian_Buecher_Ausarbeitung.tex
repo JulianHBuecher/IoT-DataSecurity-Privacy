@@ -6,7 +6,10 @@
 % arara: pdflatex
 % arara: biber
 % arara: pdflatex
-\documentclass[runningheads]{llncs}
+\documentclass[
+runningheads,
+%draft,
+]{llncs}
 
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND RELATED DOCUMENT CONFIGURATIONS
@@ -15,6 +18,7 @@
 % T1 fonts will be used to generate the final print and online PDFs, so please use T1 fonts in your manuscript whenever possible.
 % Other font encondings may result in incorrect characters.
 \usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
 
 % Used for displaying a sample figure. If possible, figure files should be included in EPS format.
 \usepackage{graphicx}
@@ -24,7 +28,12 @@
 \usepackage[
 backend=biber, % using biber, bibtex task has to be configured to use biber (Texmaker: Options)
 style=ieee, % styles overview: https://de.overleaf.com/learn/latex/Biblatex_bibliography_styles
-sorting=ynt % sorting options: https://de.overleaf.com/learn/latex/Articles/Getting_started_with_BibLaTeX
+sorting=ynt, % sorting options: https://de.overleaf.com/learn/latex/Articles/Getting_started_with_BibLaTeX
+isbn=false,
+url=false,
+eprint=false,
+related=false,
+doi=false
 ]{biblatex}
 \addbibresource{references.bib} 
 
@@ -40,6 +49,7 @@ sorting=ynt % sorting options: https://de.overleaf.com/learn/latex/Articles/Gett
 \usepackage{nameref}
 \usepackage{hyperref}
 \usepackage{float}
+ \usepackage{microtype}
 
 %----------------------------------------------------------------------------------------
 % Additional Commands
