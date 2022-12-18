@@ -23,7 +23,8 @@ runningheads,
 % Used for displaying a sample figure. If possible, figure files should be included in EPS format.
 \usepackage{graphicx}
 \graphicspath{ {./sections/} }
-	
+
+
 % Reference configuration
 \usepackage[
 backend=biber, % using biber, bibtex task has to be configured to use biber (Texmaker: Options)
@@ -31,8 +32,6 @@ style=ieee, % styles overview: https://de.overleaf.com/learn/latex/Biblatex_bibl
 sorting=ynt, % sorting options: https://de.overleaf.com/learn/latex/Articles/Getting_started_with_BibLaTeX
 isbn=false,
 url=false,
-eprint=false,
-related=false,
 doi=false
 ]{biblatex}
 \addbibresource{references.bib} 
@@ -87,7 +86,8 @@ doi=false
 %----------------------------------------------------------------------------------------
 
 \begin{abstract}
-Die Nutzung von Geräten des \ac{iot}, im Speziellen der Geräteklasse der Sensoren, ermöglicht es, Informationen aus deren Umgebung zu sammeln, die wiederum übergeordneten Applikationen für die Bereitstellung von Diensten im Rahmen von Handlungsempfehlungen zur Verfügung gestellt werden können.
+Die Nutzung von Geräten des \ac{iot}, im Speziellen der Geräteklasse der Sensoren, ermöglicht es, präzise Informationen aus deren Umgebung zu sammeln, die wiederum übergeordneten Applikationen zur Verfügung gestellt werden können. 
+Gemäß des gesammelten Datenmaterials bieten diese Anwendungen die Bereitstellung unterschiedlichster Dienste an, die beispielsweise das Ableiten von konkreten Handlungsempfehlungen für eine konkrete Situation oder eine direkte Interaktionen eines Gerätes mit seiner Umwelt zur Folge haben. 
 Hierbei kann es sich einerseits um rein technische Daten, wie zum Beispiel Metriken hochmoderner Fertigungsstraßen, oder auch um personenbezogene Informationen aus der Interaktion von menschlichen Nutzern mit den Geräten innerhalb des privaten oder geschäftlichen Kontextes handeln. 
 Auf Basis der aktuellen Rechtssprechung resultieren hieraus besonders schwerwiegende Eingriffe in die Privatsphäre der Nutzer, die bezüglich der Erhebung von persönlichen Informationen, zu jeder Zeit die Möglichkeit besitzen sollten, den Umfang und die Art der Daten zu kontrollieren, die über sie gesammelt werden.
 Ziel dieser Arbeit ist es, basierend auf den derzeit geltenden gesetzlichen Regelungen innerhalb des europäischen Raumes zu evaluieren, in welchem Rahmen persönliche Informationen von IoT-Geräten (unkontrolliert) gesammelt werden.
